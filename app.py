@@ -1,10 +1,13 @@
 from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
 
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
@@ -17,5 +20,4 @@ async def read_info(request: Request):
 
 @app.post("/send")
 async def send(name: str = Form(...), email: str = Form(...), message: str = Form(...)):
-    # Здесь добавьте логику для отправки электронного письма или любой другой обработки
     return f'Письмо от {name} успешно отправлено!'
