@@ -1,0 +1,7 @@
+# env
+.venv
+.env
+#cache
+__pycache__
+#todo
+todo.md
