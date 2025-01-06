@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Газ Авто Сервис</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
-</head>
+    <link rel="stylesheet" href="/static/styles/index.css">
 <body>
-
-<h1>Отправьте сообщение</h1>
-
-<form id="contact-form" 
+{% include 'blocks/header.html' %}
+{% include 'blocks/about.html' %}
+{% include 'blocks/advantages.html' %}
+{% include 'blocks/work.html' %}
+{% include 'blocks/services.html' %}
+{% include 'blocks/form.html' %}
+{% include 'blocks/footer.html' %}
+<!-- <form id="contact-form" 
       action="/send" 
       method="POST" 
       hx-post="/send" 
@@ -26,9 +30,8 @@
     <textarea id="message" name="message" required></textarea>
 
     <input type="submit" value="Отправить">
-</form>
+</form> -->
 
 <div id="response"></div>
-
 </body>
 </html>

@@ -1,0 +1,47 @@
+.header {
+    max-width: 1780px;
+    display: flex;
+    padding: 12px 30px;
+    margin-bottom: 73px;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav__item {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.18px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header__phone {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    display: flex;
+    align-items: center;
+}
+
+.header__social-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
