@@ -1,9 +1,8 @@
-version: '3.9'
+version: '3.8'
 
 services:
   web:
-    build:
-      context: ./Docker
+    build: .
     ports:
       - "8000:8000"
     volumes:
