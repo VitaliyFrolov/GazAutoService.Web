@@ -1,2 +1,12 @@
+/* reset basic styles */
 @import './reset.css';
+
+/* reused css styles */
+@import './ui.css';
+
+/* blocks */
 @import './header.css';
+@import './about.css';
+@import './advantages.css';
+
+@import './form.css';

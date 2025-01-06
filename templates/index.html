@@ -7,12 +7,14 @@
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <link rel="stylesheet" href="/static/styles/index.css">
 <body>
-
 {% include 'blocks/header.html' %}
-
-<h1>Отправьте сообщение</h1>
-
-<form id="contact-form" 
+{% include 'blocks/about.html' %}
+{% include 'blocks/advantages.html' %}
+{% include 'blocks/work.html' %}
+{% include 'blocks/services.html' %}
+{% include 'blocks/form.html' %}
+{% include 'blocks/footer.html' %}
+<!-- <form id="contact-form" 
       action="/send" 
       method="POST" 
       hx-post="/send" 
@@ -28,11 +30,8 @@
     <textarea id="message" name="message" required></textarea>
 
     <input type="submit" value="Отправить">
-</form>
+</form> -->
 
 <div id="response"></div>
-
-{% include 'blocks/footer.html' %}
-
 </body>
 </html>

@@ -1,0 +1,18 @@
+.button {
+    background-color: rgba(241, 114, 27, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.18px;
+    border-radius: 10px;
+    border: none;
+}
+
+.title {
+    font-size: 64px;
+    line-height: 83.2px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+}
