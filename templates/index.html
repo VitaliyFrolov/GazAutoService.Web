@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Газ Авто Сервис</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+    <script type="application/ld+json">
+        {{ {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": site_name,
+            "url": site_url,
+            "description": site_description
+        } | tojson }}
+    </script>
     <link rel="stylesheet" href="/static/styles/index.css">
 <body>
 {% include 'blocks/header.html' %}
@@ -14,6 +23,7 @@
 {% include 'blocks/services.html' %}
 {% include 'blocks/form.html' %}
 {% include 'blocks/footer.html' %}
+
 <!-- <form id="contact-form" 
       action="/send" 
       method="POST" 
