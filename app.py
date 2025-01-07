@@ -21,7 +21,9 @@ async def read_info(request: Request):
 
 @app.post("/send")
 async def send(name: str = Form(...), email: str = Form(...), message: str = Form(...)):
-    return f'Письмо от {name} успешно отправлено!'
+    print(f"Письмо отправлено от {name}, email: {email}, сообщение: {message}")
+    return {"status": "success", "message": f"Письмо от {name} успешно отправлено!"}
+
 
 @app.get('/privacy')
 async def privacy():

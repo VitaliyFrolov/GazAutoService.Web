@@ -16,32 +16,12 @@
     </script>
     <link rel="stylesheet" href="/static/styles/index.css">
 <body>
-{% include 'blocks/header.html' %}
-{% include 'blocks/about.html' %}
-{% include 'blocks/advantages.html' %}
-{% include 'blocks/work.html' %}
-{% include 'blocks/services.html' %}
-{% include 'blocks/form.html' %}
-{% include 'blocks/footer.html' %}
-
-<!-- <form id="contact-form" 
-      action="/send" 
-      method="POST" 
-      hx-post="/send" 
-      hx-target="#response" 
-      hx-trigger="submit">
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Сообщение:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <input type="submit" value="Отправить">
-</form> -->
-
-<div id="response"></div>
+    {% include 'blocks/header.html' %}
+    {% include 'blocks/about.html' %}
+    {% include 'blocks/advantages.html' %}
+    {% include 'blocks/work.html' %}
+    {% include 'blocks/services.html' %}
+    {% include 'blocks/form.html' %}
+    {% include 'blocks/footer.html' %}
 </body>
 </html>
