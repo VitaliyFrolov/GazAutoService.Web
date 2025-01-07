@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
+import uvicorn
 from meta.meta import mainPageMeta
 
 
@@ -24,7 +25,9 @@ async def send(name: str = Form(...), email: str = Form(...), message: str = For
     print(f"Письмо отправлено от {name}, email: {email}, сообщение: {message}")
     return {"status": "success", "message": f"Письмо от {name} успешно отправлено!"}
 
-
 @app.get('/privacy')
 async def privacy():
     return 'Privacy file'
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
