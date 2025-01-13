@@ -1,0 +1,21 @@
+.banner {
+    padding: 58px 81px 59px 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #3D3D3D;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.banner__title {
+    font-size: 48px;
+    line-height: 62.4px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.banner__button {
+    padding: 18px 64px;
+}

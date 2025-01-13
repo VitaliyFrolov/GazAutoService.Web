@@ -1,0 +1,9 @@
+.photos {
+    margin-bottom: 140px;
+}
+
+.photos__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}

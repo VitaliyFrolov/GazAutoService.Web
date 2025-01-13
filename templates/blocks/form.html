@@ -1,20 +1,43 @@
+<script>
+    function clearForm() {
+        const form = document.getElementById('content-form');
+        if (form) {
+            form.reset();
+        }
+    }
+</script>
 <section>
     <div>
         <h3>
             Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
         </h3>
-        <form>
-            <input type="text"/>
-            <input type="tel" />
-            <button>
+        <form
+            id="content-form"
+            action="/send"
+            method="POST"
+            hx-post="/send"
+            hx-target="#response"
+            hx-trigger="submit"
+            hx-on="htmx:afterRequest: clearForm()"
+        >
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">
                 Получить консультацию
             </button>
-            <a href="/privacy">
-                Нажимая на кнопку, вы даете согласие на обработку <span>Персональных данных</span>
-            </a>
         </form>
-    </div>
-    <img
 
-    />
+        <a href="/privacy" target="_blank">
+            Нажимая на кнопку, вы даете согласие на обработку <span>Персональных данных</span>
+        </a>
+
+        <div id="response"></div>
+    </div>
 </section>

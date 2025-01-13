@@ -1,6 +1,5 @@
 .about {
     display: flex;
-    gap: 20px;
     margin-bottom: 80px;
 }
 
@@ -18,4 +17,5 @@
 
 .about__img {
     border-radius: 16px;
+    /* FIXME: добавить размеры */
 }
