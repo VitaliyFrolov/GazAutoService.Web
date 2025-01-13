@@ -1,0 +1,14 @@
+.work {
+    margin-bottom: 140px;
+}
+
+.work__title {
+    margin-bottom: 80px;
+}
+
+.work__list {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    overflow-y: auto;
+}

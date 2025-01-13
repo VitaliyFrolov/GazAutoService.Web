@@ -1,16 +1,18 @@
-<section>
-    <h2>
+<section class="services">
+    <h2 class="title services__title">
         Наши услуги
     </h2>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <button>
-        Получить консультацию
-    </button>
+    <div class="services__content-wrapper">
+        <ul class="services__list" hx-get="/services-list" hx-trigger="load" hx-swap="outerHTML">
+        </ul>
+        <div class="services__content">
+            <div hx-get="/service-content/0" hx-trigger="load" hx-swap="innerHTML">
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="button services__button">
+            Получить консультацию
+        </button>
+    </div>
 </section>

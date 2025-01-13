@@ -3,7 +3,7 @@
 2. HTMX + Jinja
 3. JSON-LD
 4. Venv
-5. Uvicorn
+5. Uvicorn + Nginx
 6. Docker
 
 # Технические требования
