@@ -9,31 +9,18 @@ on:
       - main
 
 jobs:
-  test:
+  docker-build:
+    name: Docker Image Build
+    needs: packages
     runs-on: ubuntu-latest
-
     steps:
-      - name: Source code verification
-        uses: actions/checkout@v2
-
-      - name: Installing Python
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4 
         with:
-          python-version: '3.12'
-
-      - name: Installing dependencies
+          node-version: ${{ matrix.node-version }}
+      - name: Install Docker and Docker Compose
         run: |
-          python -m pip install --upgrade pip
-          pip install fastapi uvicorn
-          pip install -r requirements.txt
-
-      - name: Uvicorn launch
-        run: |
-          nohup uvicorn main:app --host 0.0.0.0 --port 8000 & 
-
-      - name: Checking the applications functionality
-        run: |
-          sleep 10
-          curl -f http://localhost:8000/ || exit 1
-
-# FIXME: добавить джобу на сборку докер контейнера
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+      - name: Run build docker image
+        run: docker-compose -f docker-compose.yaml up -d --build
