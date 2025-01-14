@@ -35,3 +35,5 @@ jobs:
         run: |
           sleep 10
           curl -f http://localhost:8000/ || exit 1
+
+# FIXME: добавить джобу на сборку докер контейнера

@@ -17,9 +17,9 @@ templates = Jinja2Templates(directory="templates")
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, **mainPageMeta})
 
-@app.get("/about", response_class=HTMLResponse)
+@app.get("/price", response_class=HTMLResponse)
 async def read_info(request: Request):
-    return templates.TemplateResponse("about.html", {"request": request})
+    return templates.TemplateResponse("price.html", {"request": request})
 
 @app.post("/send")
 async def send(name: str = Form(...), email: str = Form(...), message: str = Form(...)):

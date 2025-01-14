@@ -1,0 +1,38 @@
+.vacancies {
+    display: flex;
+}
+
+.vacancies__contact-wrapper {
+
+}
+
+.vacancies__contact-title {
+    font-size: 48px;
+    line-height: 62.4px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.vacancies__contact-text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.vacancies__contact-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.vacancies__contact-item {
+    
+}
+
+.vacancies__contact-phone {
+    font-size: 32px;
+    line-height: 41.6px;
+    font-weight: 500;
+}
