@@ -22,8 +22,8 @@ async def read_info(request: Request):
     return templates.TemplateResponse("price.html", {"request": request})
 
 @app.post("/send")
-async def send(name: str = Form(...), email: str = Form(...), message: str = Form(...)):
-    print(f"Письмо отправлено от {name}, email: {email}, сообщение: {message}")
+async def send(name: str = Form(...), phone: str = Form(...)):
+    print(f"Письмо отправлено от {name}, email: {phone}")
     return {"status": "success", "message": f"Письмо от {name} успешно отправлено!"}
 
 @app.get('/privacy')

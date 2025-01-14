@@ -1,5 +1,6 @@
 .vacancies {
     display: flex;
+    margin-bottom: 140px;
 }
 
 .vacancies__contact-wrapper {
