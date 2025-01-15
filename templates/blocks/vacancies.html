@@ -4,7 +4,7 @@
             Наши вакансии
         </h2>
         <p class="vacancies__contact-text">
-            Чтобы обсудить свяжитесь с нами в <br /> соцсетях или по номеру телефона.
+            Чтобы обсудить, свяжитесь с нами в <br /> соцсетях или по номеру телефона.
         </p>
         <ul class="vacancies__contact-list">
             <li class="vacancies__contact-item">
@@ -21,18 +21,11 @@
             +7 911 923 37 88
         </span>
     </div>
-    <div>
-        <ul>
-            <li>
-               
-            </li>
-            <li>
-               
-            </li>
-            <li>
-               
-            </li>
+    <div class="vacancies__vacancies">
+        <!-- Список вакансий -->
+        <ul class="vacancies__list" hx-get="/job-list" hx-trigger="load" hx-swap="outerHTML">
         </ul>
+
         <button class="button">
             Все вакансии
         </button>

@@ -1,10 +1,11 @@
 .vacancies {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 140px;
 }
 
 .vacancies__contact-wrapper {
-
+    
 }
 
 .vacancies__contact-title {
@@ -32,8 +33,34 @@
     
 }
 
+.vacancies__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vacancies__item {
+    background: #F5F6F9;
+    color: #F1721B;
+    padding: 26px;
+}
+
+.vacancies__item-content {
+    display: none;
+    padding: 10px 0;
+}
+
+.vacancies__item-content.active {
+    display: block;
+}
+
 .vacancies__contact-phone {
     font-size: 32px;
     line-height: 41.6px;
     font-weight: 500;
+}
+
+.vacancies__vacancies {
+    max-width: 1180px;
+    width: 100%;
 }
