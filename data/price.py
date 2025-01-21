@@ -1,6 +1,6 @@
-price = {
+price_data = {
    "title": 'Газель бизнес',
-   "data": [
+   "items": [
         {
             'title': 'Замена масла',
             'price': 1000

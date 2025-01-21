@@ -1,8 +1,8 @@
-{% macro render_price(prices, title) %}
+{% macro render_price(items, title) %}
 <div class="price-list">
     <h3 class="price-list__title">{{ title }}</h3>
     <ul class="price-list__items">
-        {% for item in prices %}
+        {% for item in items %}
         <li class="price-list__item">
             <span class="price-list__item-name">{{ item.title }}</span>
             <span class="price-list__item-value">{{ item.price }} ₽</span>

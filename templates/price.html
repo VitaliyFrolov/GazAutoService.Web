@@ -16,9 +16,15 @@
             Мы предлагаем профессиональное обслуживание коммерческого транспорта с <br /> минимальными простоями и гарантией надежности. Наши специалисты обладают <br /> глубокими знаниями и опытом работы с коммерческим автопарком, что позволяет <br /> обеспечивать точную диагностику, оперативный ремонт и техобслуживание.
         </p>
     </section>
-    {% include 'blocks/price.html' %}
+    
     {% include 'blocks/form.html' %}
-    {% include 'blocks/price.html' %}
+
+    {% import 'mixins/price_list.html' as price_list %}
+
+    <section class="price">
+        {{ price_list.render_price(price['items'], price['title']) }}
+    </section>
+    
     {% include 'blocks/footer.html' %}
 </body>
 </html>
