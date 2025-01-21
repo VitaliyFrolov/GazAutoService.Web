@@ -1,6 +1,8 @@
 .about {
     display: flex;
     margin-bottom: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .about__content-wrapper {

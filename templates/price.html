@@ -6,7 +6,7 @@
     <title>Газ Авто Сервис</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <link rel="stylesheet" href="/static/styles/index.css">
-<body>
+<body class="body">
     {% include 'blocks/header.html' %}
     <section class="price__main-info">
         <h2 class="title price__title">
@@ -25,7 +25,6 @@
     </section>
     
     {% include 'blocks/form.html' %}
-
 
     <section class="price">
         {{ price_list.render_price(price_2['items'], price_2['title']) }}
