@@ -1,5 +1,4 @@
 .header {
-    max-width: 1780px;
     padding: 12px 30px;
     margin-bottom: 50px;
     display: flex;
@@ -62,6 +61,10 @@
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+}
+
+.header__social-item_location {
+    margin-right: 20px;
 }
 
 .header__social-wrapper {

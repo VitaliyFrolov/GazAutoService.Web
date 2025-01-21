@@ -5,12 +5,22 @@
 @import './ui.css';
 
 /* blocks */
+/* shared */
 @import './header.css';
+@import './form.css';
+@import './footer.css';
+
+/* main page */
 @import './banner.css';
 @import './about.css';
 @import './work.css';
 @import './advantages.css';
 @import './services.css';
 @import './conditions.css';
+@import './photos.css';
+@import './vacancies.css';
+@import './contacts.css';
 
-@import './form.css';
+/* price page */
+@import './price.css';
+@import './price-list.css';

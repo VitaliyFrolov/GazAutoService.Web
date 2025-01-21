@@ -6,4 +6,6 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    overflow-y: auto;
+    justify-content: space-between;
 }

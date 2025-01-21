@@ -1,0 +1,19 @@
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+}
+
+.price__main-info {
+    margin-bottom: 108px;
+}
+
+.price__title {
+    margin-bottom: 24px;
+}
+
+.price__text {
+    font-size: 20px;
+    line-height: 26px;
+}

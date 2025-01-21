@@ -1,0 +1,32 @@
+<section class="vacancies">
+    <div class="vacancies__contact-wrapper">
+        <h2 class="vacancies__contact-title">
+            Наши вакансии
+        </h2>
+        <p class="vacancies__contact-text">
+            Чтобы обсудить, свяжитесь с нами в <br /> соцсетях или по номеру телефона.
+        </p>
+        <ul class="vacancies__contact-list">
+            <li class="vacancies__contact-item">
+                <img src="static/images/svg/whatsapp-icon.svg" width="80" height="82" alt="whatsapp" />
+            </li>
+            <li class="vacancies__contact-item">
+                <img src="static/images/svg/vk-icon.svg" width="80" height="80" alt="vk" />
+            </li>
+            <li class="vacancies__contact-item">
+                <img src="/static/images/svg/telegram-icon.svg" width="80" height="80" alt="telegram" />
+            </li>
+        </ul>
+        <span class="vacancies__contact-phone">
+            +7 911 923 37 88
+        </span>
+    </div>
+    <div class="vacancies__vacancies">
+        <ul class="vacancies__list" hx-get="/job-list" hx-trigger="load" hx-swap="outerHTML">
+        </ul>
+
+        <button class="button vacancies__button">
+            Все вакансии
+        </button>
+    </div>
+</section>
