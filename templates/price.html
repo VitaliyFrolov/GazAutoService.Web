@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Газ Авто Сервис</title>
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <link rel="stylesheet" href="/static/styles/index.css">
 <body>
     {% include 'blocks/header.html' %}
-    <h2>
-        Вторая страница
-    </h2>
+    <section class="price__main-info">
+        <h2 class="title price__title">
+            Мы работаем с частными лицами <br /> и корпоративными клиентами
+        </h2>
+        <p class="price__text">
+            Мы предлагаем профессиональное обслуживание коммерческого транспорта с <br /> минимальными простоями и гарантией надежности. Наши специалисты обладают <br /> глубокими знаниями и опытом работы с коммерческим автопарком, что позволяет <br /> обеспечивать точную диагностику, оперативный ремонт и техобслуживание.
+        </p>
+    </section>
+    {% include 'blocks/price.html' %}
+    {% include 'blocks/form.html' %}
+    {% include 'blocks/price.html' %}
     {% include 'blocks/footer.html' %}
 </body>
 </html>

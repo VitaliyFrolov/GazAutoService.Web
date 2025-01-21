@@ -7,6 +7,7 @@ import uvicorn
 from meta.meta import mainPageMeta
 from data.services import services
 from data.job import job
+from data.price import price
 
 
 app = FastAPI()
@@ -19,8 +20,8 @@ async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, **mainPageMeta})
 
 @app.get("/price", response_class=HTMLResponse)
-async def read_info(request: Request):
-    return templates.TemplateResponse("price.html", {"request": request})
+async def price(request: Request):
+    return templates.TemplateResponse("price.html", {"request": request, "price": price})
 
 @app.post("/send")
 async def send(name: str = Form(...), phone: str = Form(...)):
