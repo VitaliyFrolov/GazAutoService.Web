@@ -1,11 +1,17 @@
-{% macro render_price(items, title) %}
+{% macro render_price(items, title, subtitle) %}
 <div class="price-list">
     <h3 class="price-list__title">{{ title }}</h3>
-    <ul class="price-list__items">
+    <ul class="price-list__list">
         {% for item in items %}
         <li class="price-list__item">
-            <span class="price-list__item-name">{{ item.title }}</span>
-            <span class="price-list__item-value">{{ item.price }} ₽</span>
+            <div>
+                <h4 class="price-list__item-name">{{ item.title | safe }}</h4>
+                <p class="price-list__item-text">{{ item.subtitle | safe }}</p>
+            </div>
+            <div class="price-list__item-content-wrapper">
+                <div class="price-list__line"></div>
+                <span class="price-list__item-value">от {{ item.price }} руб.</span>
+            </div>
         </li>
         {% endfor %}
     </ul>
