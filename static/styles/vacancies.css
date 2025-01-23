@@ -62,15 +62,19 @@
     color: #F1721B;
     padding: 26px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .vacancies__item-content {
-    display: none;
-    padding: 10px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 0;
 }
 
 .vacancies__item-content.active {
-    display: block;
+    max-height: 520px;
+    padding: 10px 0;
 }
 
 .vacancies__contact-phone {
