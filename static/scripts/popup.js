@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const openButton = document.getElementById('openPopup');
+    const openButtons = document.querySelectorAll('.open-popup');
     const closeButton = document.getElementById('closePopup');
     const popupOverlay = document.getElementById('popupOverlay');
 
@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    openButton.addEventListener('click', () => {
-        popupOverlay.style.display = 'flex';
-        document.body.classList.add('no-scroll');
-        document.addEventListener('keydown', handleEscapeKey);
+    openButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            popupOverlay.style.display = 'flex';
+            document.body.classList.add('no-scroll');
+            document.addEventListener('keydown', handleEscapeKey);
+        });
     });
 
     closeButton.addEventListener('click', closePopup);

@@ -1,12 +1,17 @@
 <header class="header">
-   <img src="static/images/logo.png" width="234" height="164" alt="logo"/>
+   <a href="/">
+      <picture>
+         <source class="header__logo_mobile" srcset="/static/images/logo-mobile.png" media="(max-width: 1920px)" />
+         <img class="header__logo" src="static/images/logo.png" alt="logo" />
+      </picture>
+   </a>
    <div class="nav__wrapper">
       <div class="header__social-wrapper">
          <ul class="header__social-list">
             <li class="header__social-item header__social-item_location"> <img src="static/images/svg/location-icon-header.svg" width="39" height="39" alt="location" /></li>
-            <li class="header__social-item"><img src="static/images/svg/whatsapp-icon-header.svg" width="39" height="39" alt="whatsapp" /></li>
-            <li class="header__social-item"><img src="static/images/svg/vk-icon-header.svg" width="39" height="39" alt="vk" /></li>
-            <li class="header__social-item"><img src="static/images/svg/telegram-icon-header.svg" width="39" height="40" alt="telegram" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/whatsapp-icon-header.svg" alt="whatsapp" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/vk-icon-header.svg" alt="vk" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/telegram-icon-header.svg" alt="telegram" /></li>
          </ul>
          <span class="header__phone">
             +7 991 923 37 88
@@ -14,6 +19,9 @@
          <a href="#" class="header__mail">
             Gasservisspb@yandex.ru
          </a>
+         <button class="header__burger-menu">
+            <img src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
+         </button>
       </div>
       <nav class="nav">
          <ul class="nav__list">

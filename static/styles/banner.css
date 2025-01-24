@@ -20,3 +20,9 @@
 .banner__button {
     padding: 18px 64px;
 }
+
+@media screen and (max-width: 1920px) {
+    .banner {
+        display: none;
+    }
+}

@@ -58,3 +58,30 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
 }
+
+@media screen and (max-width: 1920px) {
+    .advantages {
+        margin: 0 0 100px 0;
+    }
+
+    .advantages__list {
+        flex-direction: column;
+    }
+
+    .advantages__title {
+        margin-bottom: 30px;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 52px;
+    }
+
+    .advantages__info {
+        font-size: 16px;
+        line-height: 20.8px;
+        font-family: 500;
+    }
+
+    .advantages-card_main {
+        padding: 0 10px;
+    }
+}

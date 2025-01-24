@@ -4,12 +4,23 @@
             <h1 class="about__title">
                 Ремонт и обслуживание коммерческого транспорта, которые минимизируют простои и потерю денег в городе Колтуши
             </h1>
-            <button class="button">
+            <button class="button open-popup">
                 Получить консультацию
             </button>
        </div>
     </div>
-    <img
-        src="static/images/about.png"
-    />
+    <picture>
+        <source srcset="static/images/about-mobile.png" media="(max-width: 1920px)" />
+        <img
+            src="static/images/about.png"
+        />
+    </picture>
+    <div class="about__content_mobile">
+        <h2 class="about__title_mobile">
+            Станем конкурентным преимуществом для Вашего бизнеса!
+        </h2>
+        <button class="button">
+            Записаться на сервис
+        </button>
+    </div>
 </section>

@@ -1,8 +1,14 @@
 /* reset basic styles */
 @import './reset.css';
 
-/* reused css styles */
+/* reused ui css styles */
 @import './ui.css';
+
+/* fonts */
+@import './fonts.css';
+
+/* global styles */
+@import './global.css';
 
 /* blocks */
 /* shared */
