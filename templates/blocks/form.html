@@ -1,11 +1,3 @@
-<script>
-    function clearForm() {
-        const form = document.getElementById('content-form');
-        if (form) {
-            form.reset();
-        }
-    }
-</script>
 <section class="form">
     <form
         id="content-form"
@@ -21,7 +13,15 @@
             Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
         </h3>
         <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
-        <input class="form__input" type="phone" id="phone" name="phone" required>
+        <input 
+            class="form__input" 
+            placeholder="+7 (___) ___-__-__" 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            required 
+            maxlength="18"
+        />
 
         <button class="button form__button" type="submit">
             Получить консультацию
