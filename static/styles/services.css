@@ -74,6 +74,12 @@
     .services {
         padding: 40px 10px;
         margin-bottom: 100px;
+        order: 4;
+    }
+
+    .services__content-wrapper {
+        display: flex;
+        justify-content: center;
     }
 
     .services__title {

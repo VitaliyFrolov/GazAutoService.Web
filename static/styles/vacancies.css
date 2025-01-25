@@ -92,3 +92,23 @@
     width: 100%;
     padding: 16px;
 }
+
+@media screen and (max-width: 1920px) {
+    .vacancies {
+        order: 9;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .vacancies__contact-list {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .vacancies__contact-phone {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+}

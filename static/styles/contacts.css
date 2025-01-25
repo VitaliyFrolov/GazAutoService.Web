@@ -39,3 +39,10 @@
 .contacts__map {
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1920px) {
+    .contacts {
+        /* order: 8; */
+        display: none;
+    }
+}

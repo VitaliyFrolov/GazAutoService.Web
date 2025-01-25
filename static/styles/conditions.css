@@ -25,7 +25,6 @@
     width: 100%;
     min-height: 357px;
 }
-
 .conditions__item-title {
     font-size: 32px;
     line-height: 37.57px;
@@ -38,4 +37,45 @@
     line-height: 18.78px;
     font-weight: 500;
     color: #000000;
+}
+
+.conditions__item-img {
+    width: 528px;
+    height: auto;
+}
+
+@media screen and (max-width: 1920px) {
+    .conditions__item:nth-child(2) {
+        grid-area: second;
+        min-height: auto;
+    }
+
+    .conditions {
+        order: 6;
+        padding: 0;
+    }
+
+    .conditions__list {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+        grid-template-areas: 
+            "second"
+            "first"
+            "third";
+    }
+
+    .conditions__item:nth-child(1) {
+        grid-area: first;
+    }
+
+    .conditions__item:nth-child(3) {
+        grid-area: third;
+    }
+
+    .conditions__item-img {
+        width: 303px;
+        height: auto;
+    }
 }

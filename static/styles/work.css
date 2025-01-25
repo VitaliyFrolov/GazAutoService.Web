@@ -15,9 +15,17 @@
     overflow-y: auto;
 }
 
-/* @media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px) {
     .work {
-        padding: 0px 10px 50px 10px;
-        margin: 0;
+        order: 3;
+        margin: 0 0 100px 0;
+        padding: 0 10px;
     }
-} */
+
+    .work__title {
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 42.9px;
+        margin-bottom: 60px;
+    }
+}

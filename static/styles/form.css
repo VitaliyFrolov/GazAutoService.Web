@@ -57,3 +57,26 @@
 .form__img {
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1920px) {
+    .form {
+        order: 5;
+        flex-direction: column-reverse;
+        margin: 0 0 100px 0;
+    }
+
+    .form__form {
+        padding: 50px 10px;
+    }
+
+    .form__title {
+        font-size: 25px;
+        line-height: 32.5px;
+        padding: 40px;
+    }
+
+    .form__img-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
