@@ -1,0 +1,12 @@
+{% macro slider(images) %}
+<div class="slider">
+    <div class="slides">
+        {% for image in images %}
+        <div class="slide">
+            <img src="{{ image }}" alt="Slide {{ loop.index }}">
+        </div>
+        {% endfor %}
+    </div>
+    <div class="pagination"></div>
+</div>
+{% endmacro %}

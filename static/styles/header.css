@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -126,6 +125,7 @@
         order: 1;
         font-size: 14px;
         line-height: 18.2px;
+        margin-left: 10px;
     }
 
     .header__mail {

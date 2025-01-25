@@ -19,4 +19,15 @@
             <img src="static/images/valday.png" width="280" height="122" alt="Ваадай" />
         </li>
     </ul>
+    {% from 'mixins/slider.html' import slider %}
+
+    <div class="work__slider">
+        {{ slider([
+            'static/images/next.png',
+            'static/images/yaz.png',
+            'static/images/gazel.png',
+            'static/images/lada.png',
+            'static/images/valday.png'
+        ]) }}
+    </div>        
 </section>

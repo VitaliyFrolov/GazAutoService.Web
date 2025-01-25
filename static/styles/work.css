@@ -15,6 +15,10 @@
     overflow-y: auto;
 }
 
+.work__slider {
+    display: none;
+}
+
 @media screen and (max-width: 1920px) {
     .work {
         order: 3;
@@ -27,5 +31,13 @@
         font-weight: 500;
         line-height: 42.9px;
         margin-bottom: 60px;
+    }
+
+    .work__list {
+        display: none;
+    }
+
+    .work__slider {
+        display: block;
     }
 }

@@ -3,6 +3,7 @@
 
 /* reused ui css styles */
 @import './ui.css';
+@import './slider.css';
 
 /* fonts */
 @import './fonts.css';
