@@ -38,9 +38,9 @@
     opacity: 1;
 }
 
-/* .form__input:focus::placeholder {
+.form__input:focus::placeholder {
     color: transparent;
-} */
+}
 
 .form__button {
     padding: 18px;
@@ -55,6 +55,7 @@
     line-height: 16.44px;
     font-weight: 500;
 }
+
 
 .form__privacy_link {
     color: #949494;

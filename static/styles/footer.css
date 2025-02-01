@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
+}
+
+.footer__logo {
+    border-radius: 10px;
 }
 
 .footer__content {
@@ -62,7 +67,34 @@
 
 @media screen and (max-width: 1920px) {
     .footer {
-        /* order: 10; */
+        order: 10;
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    .footer__content {
+        align-items: center;
+        margin-bottom: 40px;    
+    }
+
+    .footer__content-title {
         display: none;
+    }
+
+    .footer__content-text {
+        text-align: center;
+    }
+
+    .footer__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer__nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        gap: 20px;
     }
 }
