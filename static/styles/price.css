@@ -26,6 +26,8 @@
     .price {
         flex-direction: column;
         gap: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .price__title {
@@ -41,6 +43,8 @@
     }
     
     .price__main-info {
-        margin-bottom: 60px;
+        margin: 0 auto 60px auto;
+        width: 100%;
+        max-width: 850px;
     }
 }

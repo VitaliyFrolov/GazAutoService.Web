@@ -65,7 +65,11 @@
 }
 
 .form__img {
+    max-width: 1180px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
+    display: block
 }
 
 @media screen and (max-width: 1920px) {
@@ -89,5 +93,9 @@
     .form__img-wrapper {
         display: flex;
         justify-content: center;
+    }
+
+    .form__img {
+        max-width: 580px;
     }
 }
