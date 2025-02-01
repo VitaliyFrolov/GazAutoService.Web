@@ -1,7 +1,39 @@
 <div class="popup-overlay" id="popupOverlay">
     <div class="popup">
         <button class="popup-close" id="closePopup">&times;</button>
-        <h2>Popup Window</h2>
-        <p>This is a simple popup window.</p>
+        <div>
+            <form
+                id="content-form"
+                action="/send"
+                method="POST"
+                hx-post="/send"
+                hx-target="#response"
+                hx-trigger="submit"
+                hx-on="htmx:afterRequest: clearForm()"
+                class="form__form"
+            >
+                <h3 class="form__title">
+                    Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
+                </h3>
+                <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
+                <input 
+                    class="form__input" 
+                    placeholder="+7 (___) ___-__-__" 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    required 
+                    maxlength="18"
+                />
+
+                <button class="button form__button" type="submit">
+                    Получить консультацию
+                </button>
+                <a class="form__privacy_link" href="/privacy" target="_blank">
+                    Нажимая на кнопку, вы даете согласие на обработку <br /> <span class="form__privacy">Персональных данных</span>
+                </a>
+                <div id="response"></div>
+            </form>
+        </div>
     </div>
 </div>
