@@ -54,3 +54,26 @@
     font-family: 500;
     line-height: 20.8px;
 }
+
+@media screen and (max-width: 1920px) {
+    .price-list__title {
+       font-size: 40px;
+       line-height: 52px;
+       font-weight: 600;
+    }
+
+    .price-list__item-name {
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+
+    .price-list__item-text {
+        font-size: 12px;
+        line-height: 15.6px;
+    }
+
+    .price-list__item-value {
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+}

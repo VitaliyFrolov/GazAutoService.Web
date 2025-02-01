@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('closePopup');
     const popupOverlay = document.getElementById('popupOverlay');
 
+    let popupTimer;
+
     const closePopup = () => {
         popupOverlay.style.display = 'none';
         document.body.classList.remove('no-scroll');
@@ -17,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     openButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            popupOverlay.style.display = 'flex';
-            document.body.classList.add('no-scroll');
-            document.addEventListener('keydown', handleEscapeKey);
+            openPopup();
         });
     });
 
@@ -30,4 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
             closePopup();
         }
     });
+
+    const openPopup = () => {
+        if (popupOverlay.style.display !== 'flex') {
+            popupOverlay.style.display = 'flex';
+            document.body.classList.add('no-scroll');
+            document.addEventListener('keydown', handleEscapeKey);
+        }
+    };
+
+    popupTimer = setTimeout(() => {
+        openPopup();
+    }, 300000);
 });

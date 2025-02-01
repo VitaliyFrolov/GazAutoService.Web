@@ -21,3 +21,26 @@
     font-size: 20px;
     line-height: 26px;
 }
+
+@media screen and (max-width: 1920px) {
+    .price {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .price__title {
+        font-size: 30px;
+        line-height: 39px;
+        font-weight: 500;
+    }
+
+    .price__text {
+        font-size: 16px;
+        line-height: 20.8px;
+        font-weight: 500;
+    }
+    
+    .price__main-info {
+        margin-bottom: 60px;
+    }
+}
