@@ -6,7 +6,8 @@
     <title>Газ Авто Сервис</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <link rel="stylesheet" href="/static/styles/index.css">
-<body>
+    <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<body class="body">
     {% include 'blocks/header.html' %}
     <section class="price__main-info">
         <h2 class="title price__title">
@@ -26,7 +27,6 @@
     
     {% include 'blocks/form.html' %}
 
-
     <section class="price">
         {{ price_list.render_price(price_2['items'], price_2['title']) }}
         {{ price_list.render_price(price_2['items'], price_2['title']) }}
@@ -34,4 +34,9 @@
     
     {% include 'blocks/footer.html' %}
 </body>
+<script src="/static/scripts/anchor.js"></script>
+<script src="/static/scripts/burgerMenu.js"></script>
+<script src="/static/scripts/phoneValidate.js"></script>
+<script src="/static/scripts/clearForm.js"></script>
+<script src="/static/scripts/popup.js"></script>
 </html>

@@ -1,12 +1,17 @@
 <header class="header">
-   <img src="static/images/logo.png" width="234" height="164" alt="logo"/>
+   <a href="/">
+      <picture>
+         <source class="header__logo_mobile" srcset="/static/images/logo-mobile.png" media="(max-width: 1920px)" />
+         <img class="header__logo" src="static/images/logo.png" alt="logo" />
+      </picture>
+   </a>
    <div class="nav__wrapper">
       <div class="header__social-wrapper">
          <ul class="header__social-list">
             <li class="header__social-item header__social-item_location"> <img src="static/images/svg/location-icon-header.svg" width="39" height="39" alt="location" /></li>
-            <li class="header__social-item"><img src="static/images/svg/whatsapp-icon-header.svg" width="39" height="39" alt="whatsapp" /></li>
-            <li class="header__social-item"><img src="static/images/svg/vk-icon-header.svg" width="39" height="39" alt="vk" /></li>
-            <li class="header__social-item"><img src="static/images/svg/telegram-icon-header.svg" width="39" height="40" alt="telegram" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/whatsapp-icon-header.svg" alt="whatsapp" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/vk-icon-header.svg" alt="vk" /></li>
+            <li class="header__social-item"><img class="header__social-icon" src="static/images/svg/telegram-icon-header.svg" alt="telegram" /></li>
          </ul>
          <span class="header__phone">
             +7 991 923 37 88
@@ -14,16 +19,35 @@
          <a href="#" class="header__mail">
             Gasservisspb@yandex.ru
          </a>
+         <button class="header__burger-menu">
+            <img src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
+         </button>
       </div>
       <nav class="nav">
          <ul class="nav__list">
-            <li class="nav__item"><a href="/">О нас</a></li>
-            <li class="nav__item"><a href="/">Для бизнеса</a></li>
-            <li class="nav__item"><a href="/">Вакансии</a></li>
-            <li class="nav__item"><a href="/">Услуги</a></li>
+            <li class="nav__item"><a href="/#about-block">О нас</a></li>
+            <li class="nav__item"><a href="/#work-block">Для бизнеса</a></li>
+            <li class="nav__item"><a href="/#vacancies-block">Вакансии</a></li>
+            <li class="nav__item"><a href="/#services-block">Услуги</a></li>
             <li class="nav__item"><a href="/price">Цены</a></li>
-            <li class="nav__item"><a href="/">Контакты</a></li>
+            <li class="nav__item"><a href="/#contacts-block">Контакты</a></li>
          </ul>
       </nav>
    </div>
 </header>
+
+<div class="overlay"></div>
+
+<div class="nav-mobile">
+   <button class="nav-mobile__ex-button ex-btn">
+      <img width="40" height="40" alt="exit menu" src="static/images/svg/exit.svg" />
+   </button>
+   <ul class="nav-mobile__list">
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/#about-block">О нас</a></li>
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/#work-block">Для бизнеса</a></li>
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/#vacancies-block">Вакансии</a></li>
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/#services-block">Услуги</a></li>
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/price">Цены</a></li>
+      <li class="nav-mobile__item"><a class="nav-mobile__link" href="/#contacts-block">Контакты</a></li>
+   </ul>
+</div>

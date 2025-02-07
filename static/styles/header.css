@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -50,7 +49,6 @@
 
 .header__mail {
     color: #F1721B;
-    text-decoration: underline;
     font-size: 26px;
     line-height: 33.8px;
     font-weight: 600;
@@ -67,6 +65,11 @@
     margin-right: 20px;
 }
 
+.header__social-icon {
+    width: 39px;
+    height: auto;
+}
+
 .header__social-wrapper {
     display: flex;
     align-items: center;
@@ -74,4 +77,129 @@
     gap: 144px;
     padding: 12px 0;
     margin-left: auto;
+}
+
+.header__burger-menu {
+    display: none;
+}
+
+.nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #F5F6F9;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px 40px;
+    margin: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1920px) {
+    .header {
+        padding: 10px;
+        margin: 0;
+        align-items: center;
+    }
+
+    .header__logo_mobile {
+        width: 62px;
+        height: auto;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .header__social-wrapper {
+        margin: 0;
+        gap: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__social-icon {
+        width: 28px;
+        height: auto;
+    }
+
+    .header__social-list {
+        order: 2;
+        margin-left: 20px;
+    }
+
+    .header__social-item_location {
+        display: none;
+    }
+
+    .header__phone {
+        order: 1;
+        font-size: 14px;
+        line-height: 18.2px;
+        margin-left: 10px;
+    }
+
+    .header__mail {
+        display: none;
+    }
+
+    .header__burger-menu {
+        display: block;
+        border: none;
+        padding: 0;
+        background-color: inherit;
+        margin-left: 13px;
+        order: 3;
+    }
+
+    .nav-mobile.active {
+        display: flex;
+        transform: translateX(0);
+        background: #373737;
+    }
+    
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .nav-mobile__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .nav-mobile__item {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 23.48px;
+        font-weight: 500;
+    }
+
+    .nav-mobile__ex-button {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        border: none;
+        background-color: inherit;
+    }
 }

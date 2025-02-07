@@ -2,16 +2,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 140px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .vacancies__title {
     font-size: 32px;
     line-height: 37.57px;
     font-weight: 600;
-}
-
-.vacancies__contact-wrapper {
-    
 }
 
 .vacancies__content-list {
@@ -52,10 +50,6 @@
     margin-bottom: 40px;
 }
 
-.vacancies__contact-item {
-    
-}
-
 .vacancies__list {
     display: flex;
     flex-direction: column;
@@ -68,15 +62,19 @@
     color: #F1721B;
     padding: 26px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .vacancies__item-content {
-    display: none;
-    padding: 10px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 0;
 }
 
 .vacancies__item-content.active {
-    display: block;
+    max-height: 520px;
+    padding: 10px 0;
 }
 
 .vacancies__contact-phone {
@@ -93,4 +91,24 @@
 .vacancies__button {
     width: 100%;
     padding: 16px;
+}
+
+@media screen and (max-width: 1920px) {
+    .vacancies {
+        order: 9;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .vacancies__contact-list {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .vacancies__contact-phone {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
 }

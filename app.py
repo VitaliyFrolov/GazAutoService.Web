@@ -1,3 +1,4 @@
+from email.message import EmailMessage
 from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -8,7 +9,18 @@ from meta.meta import mainPageMeta
 from data.services import services
 from data.job import job
 from data.price import price_data, price_data_2
+import aiosmtplib
+import logging
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+SMTP_SERVER = os.getenv("SMTP_SERVER")
+SMTP_PORT = int(os.getenv("SMTP_PORT"))
+SMTP_LOGIN = os.getenv("SMTP_LOGIN")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+SMTP_EMAIL_TO = os.getenv('SMTP_EMAIL_TO')
 
 app = FastAPI()
 
@@ -29,8 +41,33 @@ async def price(request: Request):
 
 @app.post("/send")
 async def send(name: str = Form(...), phone: str = Form(...)):
-    print(f"Письмо отправлено от {name}, email: {phone}")
-    return {"status": "success", "message": f"Письмо от {name} успешно отправлено!"}
+    email_content = f"""
+    <h2>Новая заявка с сайта</h2>
+    <p><strong>Имя:</strong> {name}</p>
+    <p><strong>Телефон:</strong> {phone}</p>
+    """
+
+    message = EmailMessage()
+    message["From"] = SMTP_LOGIN
+    message["To"] = SMTP_EMAIL_TO
+    message["Subject"] = "Новая заявка с сайта"
+    message.set_content(email_content, subtype="html")
+
+    try:
+        logging.info(f"Отправка письма на {message['To']}...")
+        await aiosmtplib.send(
+            message,
+            hostname=SMTP_SERVER,
+            port=SMTP_PORT,
+            username=SMTP_LOGIN,
+            password=SMTP_PASSWORD,
+            use_tls=True,
+        )
+        logging.info("Письмо успешно отправлено!")
+        return {"status": "success", "message": "Письмо успешно отправлено!"}
+    except Exception as e:
+        logging.error(f"Ошибка отправки письма: {e}")
+        return {"status": "error", "message": f"Ошибка отправки: {e}"}
 
 @app.get('/privacy')
 async def privacy():

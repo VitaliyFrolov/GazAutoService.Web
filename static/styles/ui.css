@@ -16,3 +16,15 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
 }
+
+@media screen and (max-width: 1920px) {
+    .title {
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 600;
+    }
+
+    .button {
+        padding: 20px;
+    }
+}

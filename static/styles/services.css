@@ -2,6 +2,7 @@
     padding: 85px 72px;
     background: #F1721B;
     margin-bottom: 140px;
+    border-radius: 10px;
 }
 
 .services__title {
@@ -67,4 +68,47 @@
     display: flex;
     background: #3D3D3D;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1920px) {
+    .services {
+        padding: 40px 10px;
+        margin-bottom: 100px;
+        order: 4;
+    }
+
+    .services__content-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .services__title {
+        margin-bottom: 40px;
+    }
+
+    .services__list {
+        gap: 10px;
+    }
+
+    .services__list {
+        min-width: auto;
+    }
+
+    .services__item {
+        padding: 20px;
+    }
+
+    .services__button {
+        margin: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: #F1721B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .services__content {
+        display: none;
+        /* FIXME: на данный момент стили для информации отсутствуют */
+    }
 }

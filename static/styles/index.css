@@ -1,12 +1,20 @@
 /* reset basic styles */
 @import './reset.css';
 
-/* reused css styles */
+/* reused ui css styles */
 @import './ui.css';
+@import './slider.css';
+
+/* fonts */
+@import './fonts.css';
+
+/* global styles */
+@import './global.css';
 
 /* blocks */
 /* shared */
 @import './header.css';
+@import './popup.css';
 @import './form.css';
 @import './footer.css';
 

@@ -1,4 +1,4 @@
-<section class="work">
+<section class="work" id="work-block">
     <h3 class="title work__title">
         Мы работаем с частными лицами <br /> и корпоративными клиентами
     </h3>
@@ -19,4 +19,15 @@
             <img src="static/images/valday.png" width="280" height="122" alt="Ваадай" />
         </li>
     </ul>
+    {% from 'mixins/slider.html' import slider %}
+
+    <div class="work__slider">
+        {{ slider([
+            'static/images/next.png',
+            'static/images/yaz.png',
+            'static/images/gazel.png',
+            'static/images/lada.png',
+            'static/images/valday.png'
+        ]) }}
+    </div>        
 </section>

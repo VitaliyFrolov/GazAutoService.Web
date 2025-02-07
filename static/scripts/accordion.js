@@ -4,6 +4,13 @@ document.addEventListener("click", (event) => {
         const content = parentItem.querySelector(".vacancies__item-content");
 
         if (content) {
+            const allContents = document.querySelectorAll(".vacancies__item-content.active");
+            allContents.forEach((openContent) => {
+                if (openContent !== content) {
+                    openContent.classList.remove("active");
+                }
+            });
+
             content.classList.toggle("active");
         }
     }
