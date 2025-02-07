@@ -9,6 +9,7 @@
     align-items: center;
     gap: 20px;
 }
+
 .advantages__title {
     color: rgba(241, 114, 27, 1);
     font-size: 48px;
@@ -84,5 +85,35 @@
 
     .advantages-card_main {
         padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .advantages__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .advantages__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .advantages__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages__list {
+        grid-template-columns: 1fr;
     }
 }
