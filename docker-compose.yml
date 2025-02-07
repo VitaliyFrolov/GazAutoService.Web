@@ -7,8 +7,8 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
 
 #   nginx:
 #     image: nginx:latest
