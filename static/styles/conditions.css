@@ -46,7 +46,7 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1921px) {
     .conditions__item:nth-child(2) {
         grid-area: second;
         min-height: auto;
@@ -82,7 +82,7 @@
     }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1921px) {
     .conditions {
         max-width: 800px;
         margin-left: auto;
@@ -100,6 +100,10 @@
         min-height: auto;
         gap: 80px;
     }
+
+    .conditions__item-title {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -110,6 +114,10 @@
 
 @media screen and (max-width: 420px) {
     .conditions__title {
+        text-align: start;
+    }
+
+    .conditions__item-title {
         text-align: start;
     }
 }

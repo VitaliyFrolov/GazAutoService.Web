@@ -133,11 +133,24 @@
 }
 
 @media screen and (max-width: 421px) {
+    .services {
+        padding: 40px 10px;
+    }
+
     .services__title {
         text-align: start;
     }
 
     .services__item {
         text-align: start;
+    }
+
+    .services__item {
+        font-size: 24px;
+    }
+
+    .services__button {
+        padding: 14px 21px;
+        font-size: 26px;
     }
 }
