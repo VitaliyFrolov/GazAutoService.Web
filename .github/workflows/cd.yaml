@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh root@${{ SERVER_IP }} "cd GazAutoService.Web && git pull origin main && docker-compose up --build -d"
+          ssh root@${{ secrets.SERVER_IP }} "cd GazAutoService.Web && git pull origin main && docker-compose up --build -d"
