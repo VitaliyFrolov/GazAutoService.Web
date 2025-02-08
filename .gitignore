@@ -7,3 +7,6 @@ __pycache__
 todo.md
 # misc
 .DS_Store
+# SSL
+certs/*
+
