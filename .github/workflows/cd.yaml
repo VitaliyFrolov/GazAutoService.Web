@@ -17,8 +17,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H {{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H 31.130.146.236 >> ~/.ssh/known_hosts
 
       - name: Deploy to server
         run: |
-          ssh root@${{ secrets.SERVER_IP }} "cd GazAutoService.Web && git pull origin main && docker-compose up --build -d"
+          ssh root@$31.130.146.236 "cd GazAutoService.Web && git pull origin main && docker-compose up --build -d"
