@@ -3,6 +3,8 @@
     background: #F1721B;
     margin-bottom: 140px;
     border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .services__title {
@@ -72,18 +74,9 @@
 
 @media screen and (max-width: 1920px) {
     .services {
-        padding: 40px 10px;
+        padding: 40px 20px;
         margin-bottom: 100px;
         order: 4;
-    }
-
-    .services__content-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-
-    .services__title {
-        margin-bottom: 40px;
     }
 
     .services__list {
@@ -96,6 +89,7 @@
 
     .services__item {
         padding: 20px;
+        text-align: center;
     }
 
     .services__button {
@@ -106,9 +100,44 @@
         display: flex;
         justify-content: center;
     }
+}
+
+@media screen and (max-width: 1600px) {
+    .services {
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px;
+    }
+
+    .services__content-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .services__title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
     .services__content {
         display: none;
-        /* FIXME: на данный момент стили для информации отсутствуют */
+    }
+
+    .services__button {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .services__title {
+        text-align: start;
+    }
+
+    .services__item {
+        text-align: start;
     }
 }
