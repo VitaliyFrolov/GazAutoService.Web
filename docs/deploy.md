@@ -42,4 +42,4 @@ sudo apt-get install docker-compose
 sudo apt install make
 ```
 
-`make build-start` - для запуска проекта
+`make build-up` - для запуска проекта
