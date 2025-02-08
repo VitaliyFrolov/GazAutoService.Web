@@ -1,4 +1,4 @@
-name: Deploy to Timeweb Cloud
+name: Deploy
 
 on:
   pull_request:

@@ -45,6 +45,7 @@
     line-height: 33.8px;
     display: flex;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header__mail {
