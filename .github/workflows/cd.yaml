@@ -19,6 +19,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 31.130.146.236 >> ~/.ssh/known_hosts
 
+      - name: Debug SSH connection
+        run: |
+          ssh -v root@31.130.146.236 "echo 'SSH connection successful'"
+
       - name: Deploy to server
         run: |
-          ssh root@$31.130.146.236 "cd GazAutoService.Web && docker-compose down && git pull origin main && docker-compose up --build -d"
+          ssh root@31.130.146.236 "cd GazAutoService.Web && docker-compose down && git pull origin main && docker-compose up --build -d"
