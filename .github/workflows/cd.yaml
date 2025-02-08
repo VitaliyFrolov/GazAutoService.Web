@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh root@$31.130.146.236 "cd GazAutoService.Web && git pull origin main && docker-compose up --build -d"
+          ssh root@$31.130.146.236 "cd GazAutoService.Web && docker-compose down && git pull origin main && docker-compose up --build -d"
