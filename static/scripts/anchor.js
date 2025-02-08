@@ -4,8 +4,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const navMobile = document.querySelector(".nav-mobile");
+    const overlay = document.querySelector(".overlay");
+    const body = document.querySelector("body");
+
     if (navMobile) {
         addSmoothScrolling(navMobile);
+    }
+
+    function closeMenu() {
+        navMobile.classList.remove("active");
+        overlay.classList.remove("active");
+        body.style.overflow = "";
+    }
+
+    function addSmoothScrolling(container) {
+        container.querySelectorAll('a[href^="/#"], a[href^="#"]').forEach((link) => {
+            link.addEventListener("click", (e) => {
+                const hash = link.getAttribute("href").replace("/", "");
+                const isSamePage = window.location.pathname === "/";
+
+                if (isSamePage) {
+                    e.preventDefault();
+                    history.pushState(null, null, hash);
+                    smoothScroll(hash);
+                    closeMenu();
+                } else {
+                    window.location.href = "/" + hash;
+                }
+            });
+        });
     }
 });
 
@@ -19,15 +46,4 @@ function smoothScroll(hash) {
             });
         }, 100);
     }
-}
-
-function addSmoothScrolling(container) {
-    container.querySelectorAll('a[href^="/#"]').forEach((link) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const hash = link.getAttribute("href").replace("/", "");
-            history.pushState(null, null, hash);
-            smoothScroll(hash);
-        });
-    });
 }

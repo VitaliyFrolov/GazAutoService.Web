@@ -77,3 +77,19 @@
         line-height: 23.4px;
     }
 }
+
+@media screen and (max-width: 720px) {
+    .price-list__line {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .price-list__line {
+        width: 10vw;
+    }
+
+    .price-list__item-content-wrapper {
+        gap: 5px;
+    }
+}

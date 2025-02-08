@@ -93,7 +93,7 @@
     padding: 16px;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1921px) {
     .vacancies {
         order: 9;
         flex-direction: column;
@@ -110,5 +110,37 @@
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .vacancies__contact-title {
+        text-align: center;
+    }
+    
+    .vacancies__contact-text {
+        text-align: center;
+    }
+
+    .vacancies__vacancies {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .vacancies__contact-title {
+        text-align: start;
+    }
+
+    .vacancies__contact-text {
+        text-align: start;
+    }
+
+    .vacancies__title {
+        font-size: 24px;
+    }
+
+    .vacancies__button {
+        font-size: 20px;
     }
 }
