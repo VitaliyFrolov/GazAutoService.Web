@@ -25,6 +25,7 @@
     width: 100%;
     min-height: 357px;
 }
+
 .conditions__item-title {
     font-size: 32px;
     line-height: 37.57px;
@@ -42,6 +43,7 @@
 .conditions__item-img {
     width: 528px;
     height: auto;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 1920px) {
@@ -77,5 +79,37 @@
     .conditions__item-img {
         width: 303px;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .conditions {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 16px;
+        padding-bottom: 10px;
+    }
+
+    .conditions__title {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .conditions__item {
+        min-height: auto;
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .conditions {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .conditions__title {
+        text-align: start;
     }
 }
