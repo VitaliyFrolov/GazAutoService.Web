@@ -9,8 +9,6 @@ services:
       - .:/app
     networks:
       - app-network
-    env_file:
-      - .env
 
   nginx:
     image: nginx:latest
