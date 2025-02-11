@@ -15,7 +15,7 @@ sudo apt install curl software-properties-common ca-certificates apt-transport-h
 ```
 4. Добавление GPG-ключа Docker
 ```
-    wget -O- https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/docker.gpg > /dev/null
+wget -O- https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/docker.gpg > /dev/null
 ```
 5. Добавление репозитория Docker
 ```
