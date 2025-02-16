@@ -79,7 +79,7 @@ async def privacy():
     try:
         async with aiofiles.open(file_path, mode="r", encoding="utf-8") as file:
             content = await file.read()
-        return PlainTextResponse(content)
+        return PlainTextResponse(content, media_type="text/plain")
     except FileNotFoundError:
         return PlainTextResponse("Файл политики конфиденциальности не найден", status_code=404)
 

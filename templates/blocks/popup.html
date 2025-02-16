@@ -9,7 +9,7 @@
                 hx-post="/send"
                 hx-target="#response"
                 hx-trigger="submit"
-                hx-on="htmx:afterRequest: clearFormAndClosePopup(), htmx:responseError: clearErrorMessages()"
+                htmx-on="htmx:afterRequest: clearFormAndClosePopup() | htmx:responseError: clearErrorMessages()"
                 hx-swap="innerHTML"
                 class="form__form"
             >
