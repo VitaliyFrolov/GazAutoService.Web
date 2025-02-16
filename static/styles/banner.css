@@ -21,7 +21,41 @@
     padding: 18px 64px;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1921px) {
+    .banner__title {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1481px) {
+    .banner {
+        padding: 29px 31px 29px 32px;
+        margin-bottom: 77px
+    }
+
+    .banner__title {
+        font-size: 29px;
+        line-height: 26px;
+    }
+
+    .banner__button {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .banner {
+        padding: 29px 26px 24px 35px;
+        margin-bottom: 38px
+    }
+
+    .banner__button {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
     .banner {
         display: none;
     }
