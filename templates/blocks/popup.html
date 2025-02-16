@@ -6,12 +6,11 @@
         <div>
             <form
                 id="content-form"
-                action="/send"
-                method="POST"
                 hx-post="/send"
                 hx-target="#response"
                 hx-trigger="submit"
-                hx-on="htmx:afterRequest: clearForm()"
+                htmx-on="htmx:afterRequest: clearFormAndClosePopup() | htmx:responseError: clearErrorMessages()"
+                hx-swap="innerHTML"
                 class="form__form"
             >
                 <h3 class="form__title">
@@ -27,7 +26,6 @@
                     required 
                     maxlength="18"
                 />
-
                 <button class="button form__button" type="submit">
                     Получить консультацию
                 </button>

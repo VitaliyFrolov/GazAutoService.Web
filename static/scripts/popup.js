@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('closePopup');
     const popupOverlay = document.getElementById('popupOverlay');
 
-    let popupTimer;
-
     const closePopup = () => {
         popupOverlay.style.display = 'none';
         document.body.classList.remove('no-scroll');
@@ -38,8 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('keydown', handleEscapeKey);
         }
     };
-
-    popupTimer = setTimeout(() => {
-        openPopup();
-    }, 300000);
 });
+
+const clearFormAndClosePopup = () => {
+    const form = document.getElementById('content-form');
+    if (form) {
+        form.reset();
+    }
+    closePopup(); 
+};
+
+const clearErrorMessages = () => {
+    const errorMessages = document.querySelectorAll('.error-message');
+    errorMessages.forEach((message) => {
+        message.remove();
+    });
+};

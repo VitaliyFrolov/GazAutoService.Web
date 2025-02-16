@@ -1,6 +1,6 @@
 from email.message import EmailMessage
 from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
@@ -13,6 +13,7 @@ import aiosmtplib
 import logging
 import os
 from dotenv import load_dotenv
+import aiofiles
 
 load_dotenv()
 
@@ -39,7 +40,7 @@ async def price(request: Request):
         "price_2": price_data_2
     })
 
-@app.post("/send")
+@app.post("/send", response_class=HTMLResponse)
 async def send(name: str = Form(...), phone: str = Form(...)):
     email_content = f"""
     <h2>Новая заявка с сайта</h2>
@@ -58,20 +59,29 @@ async def send(name: str = Form(...), phone: str = Form(...)):
         await aiosmtplib.send(
             message,
             hostname=SMTP_SERVER,
-            port=SMTP_PORT,
+            port=465,
             username=SMTP_LOGIN,
             password=SMTP_PASSWORD,
-            use_tls=True,
+            use_tls=True
         )
         logging.info("Письмо успешно отправлено!")
-        return {"status": "success", "message": "Письмо успешно отправлено!"}
+
+        return "<p class='success-message'>Заявка успешно отправлена!</p>"
+
     except Exception as e:
         logging.error(f"Ошибка отправки письма: {e}")
-        return {"status": "error", "message": f"Ошибка отправки: {e}"}
+        return f"<p class='error-message'>Во время отправки произошла ошибка, попробуйте позже</p>"
 
-@app.get('/privacy')
+
+@app.get('/privacy', response_class=PlainTextResponse)
 async def privacy():
-    return 'Privacy file'
+    file_path = "static/privacy/privacy.txt"
+    try:
+        async with aiofiles.open(file_path, mode="r", encoding="utf-8") as file:
+            content = await file.read()
+        return PlainTextResponse(content, media_type="text/plain")
+    except FileNotFoundError:
+        return PlainTextResponse("Файл политики конфиденциальности не найден", status_code=404)
 
 @app.get("/services-list", response_class=HTMLResponse)
 async def get_services_list():

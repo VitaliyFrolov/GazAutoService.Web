@@ -7,7 +7,9 @@
         hx-target="#response"
         hx-trigger="submit"
         hx-on="htmx:afterRequest: clearForm()"
+        hx-headers='{"HX-Redirect": "false"}'
         class="form__form"
+        hx-swap="innerHTML"
     >
         <h3 class="form__title">
             Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
@@ -29,7 +31,7 @@
         <a class="form__privacy_link" href="/privacy" target="_blank">
             Нажимая на кнопку, вы даете согласие на обработку <br /> <span class="form__privacy">Персональных данных</span>
         </a>
-        <div id="response"></div>
+        <div id="response" hx-swap="outerHTML"></div>
     </form>
     <picture class="form__img-wrapper">
         <source srcset="/static/images/form-mobule-img.png" media="(max-width: 1920px)" />
