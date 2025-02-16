@@ -47,6 +47,7 @@ async def send(name: str = Form(...), phone: str = Form(...)):
     <p><strong>Телефон:</strong> {phone}</p>
     """
 
+    print(SMTP_LOGIN, SMTP_PASSWORD, SMTP_EMAIL_TO, SMTP_PORT, SMTP_SERVER)
     message = EmailMessage()
     message["From"] = SMTP_LOGIN
     message["To"] = SMTP_EMAIL_TO
@@ -58,10 +59,10 @@ async def send(name: str = Form(...), phone: str = Form(...)):
         await aiosmtplib.send(
             message,
             hostname=SMTP_SERVER,
-            port=SMTP_PORT,
+            port=465,
             username=SMTP_LOGIN,
             password=SMTP_PASSWORD,
-            use_tls=True,
+            use_tls=True
         )
         logging.info("Письмо успешно отправлено!")
         return {"status": "success", "message": "Письмо успешно отправлено!"}

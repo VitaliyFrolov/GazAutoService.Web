@@ -11,7 +11,7 @@
                 hx-post="/send"
                 hx-target="#response"
                 hx-trigger="submit"
-                hx-on="htmx:afterRequest: clearForm()"
+                hx-on="htmx:afterRequest: clearForm(), htmx:afterRequest: closePopup(), htmx:responseError: clearErrorMessages()"
                 class="form__form"
             >
                 <h3 class="form__title">

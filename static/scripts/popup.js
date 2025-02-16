@@ -42,4 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
     popupTimer = setTimeout(() => {
         openPopup();
     }, 300000);
+
+    const form = document.getElementById('content-form');
+    if (form) {
+        form.addEventListener('htmx:afterRequest', () => {
+            closePopup();
+        });
+    }
 });
+
+const clearErrorMessages = () => {
+    const errorMessages = document.querySelectorAll('.error-message');
+    errorMessages.forEach((message) => {
+        message.remove();
+    });
+};
