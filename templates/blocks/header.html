@@ -1,7 +1,6 @@
 <header class="header">
-   <a href="/">
+   <a class="header__logo-link" href="/">
       <picture>
-         <source class="header__logo_mobile" srcset="/static/images/logo-mobile.png" media="(max-width: 1920px)" />
          <img class="header__logo" src="static/images/logo.png" alt="logo" />
       </picture>
    </a>
@@ -9,8 +8,11 @@
       <div class="header__social-wrapper">
          <ul class="header__social-list">
             <li class="header__social-item header__social-item_location">
+               <a class="header__social-item_location-text" href="https://yandex.ru/maps/-/CHqu7T8Q" target="_blank">
+                  Ленинградская область, Всеволожский <br /> район, Заневское городское поселение
+               </a>
                <a href="https://yandex.ru/maps/-/CHqu7T8Q" target="_blank">
-                  <img src="static/images/svg/location-icon-header.svg" width="39" height="39" alt="location" />
+                  <img src="static/images/svg/location-icon-header.svg" width="42" height="42" alt="location" />
                </a>
             </li>
             <li class="header__social-item">
@@ -29,16 +31,18 @@
                </a>
             </li>
          </ul>
-         <span class="header__phone">
-            <a href="tel:+79119233788">
-               +7 911 923 37 88
+         <div class="header__mail-wrapper">
+            <span class="header__phone">
+               <a href="tel:+79119233788">
+                  +7 911 923 37 88
+               </a>
+            </span>
+            <a class="header__mail" href="mailto:Gazservisspb@yandex.ru">
+               Gasservisspb@yandex.ru
             </a>
-         </span>
-         <a class="header__mail" href="mailto:Gazservisspb@yandex.ru">
-            Gasservisspb@yandex.ru
-         </a>
+         </div>
          <button class="header__burger-menu">
-            <img src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
+            <img class="header__burger-menu-icon" src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
          </button>
       </div>
       <nav class="nav">
