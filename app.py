@@ -1,6 +1,6 @@
 from email.message import EmailMessage
 from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
@@ -13,6 +13,7 @@ import aiosmtplib
 import logging
 import os
 from dotenv import load_dotenv
+import aiofiles
 
 load_dotenv()
 
@@ -72,9 +73,15 @@ async def send(name: str = Form(...), phone: str = Form(...)):
         return f"<p class='error-message'>Во время отправки произошла ошибка, попробуйте позже</p>"
 
 
-@app.get('/privacy')
+@app.get('/privacy', response_class=PlainTextResponse)
 async def privacy():
-    return 'Privacy file'
+    file_path = "static/privacy/privacy.txt"
+    try:
+        async with aiofiles.open(file_path, mode="r", encoding="utf-8") as file:
+            content = await file.read()
+        return PlainTextResponse(content)
+    except FileNotFoundError:
+        return PlainTextResponse("Файл политики конфиденциальности не найден", status_code=404)
 
 @app.get("/services-list", response_class=HTMLResponse)
 async def get_services_list():
