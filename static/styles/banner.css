@@ -21,7 +21,34 @@
     padding: 18px 64px;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 701px) {
+    .banner {
+        padding: 29px 31px 29px 32px;
+        margin-bottom: 77px
+    }
+
+    .banner_title {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .banner {
+        padding: 29px 26px 24px 35px;
+        margin-bottom: 38px
+    }
+
+    .banner_title {
+        font-size: 29px;
+    }
+
+    .banner__button {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+}
+
+@media screen and (max-width: 376px) {
     .banner {
         display: none;
     }

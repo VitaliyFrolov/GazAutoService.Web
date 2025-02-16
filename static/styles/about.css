@@ -25,9 +25,9 @@
     display: none;
 }
 
-/* tablet and mobile */
-@media screen and (max-width: 1600px) {
-    .about {
+@media screen and (max-width: 1921px) {
+    
+    /* .about {
         flex-direction: column;
         align-items: center;
         margin: 0px 0px 80px 0px;
@@ -70,10 +70,10 @@
 
     picture {
         width: 100%;
-    }
+    } */
 }
 
-/* mobile only */
+/* mobile only
 @media screen and (max-width: 1600px) and (min-width: 500px) {
     .about__content_mobile {
        width: 95vw;
@@ -95,4 +95,4 @@
     .about__img {
         max-width: 95vw;
     }
-}
+} */
