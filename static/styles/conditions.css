@@ -2,6 +2,8 @@
     background: #F5F6F9;
     padding: 60px 30px; 
     margin-bottom: 140px;
+    /* FIXME: ! */
+    display: none;
 }
 
 .conditions__title {
