@@ -6,6 +6,7 @@
 5. Uvicorn + Nginx
 6. Docker
 7. Github actions (CI/CD)
+8. TG API
 
 # Технические требования
 ## 1. Реализовать core функционал приложения, позволяющий поднимать вебсервер и отдавать данные пользователю
@@ -42,6 +43,7 @@ async def index(request: Request):
 ```
 2. Форма - `templates/blocks/form.html`
 3. Доп сприпты для работы формы - `static/scripts/clearForm.js`
+Форма отправляется в tg чат, при помощи tg бота
 
 
 ## Реализация микроразметки для улучшения СЕО
