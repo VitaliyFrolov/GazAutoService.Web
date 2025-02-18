@@ -72,85 +72,91 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1921px) {
     .services {
-        padding: 40px 20px;
-        margin-bottom: 100px;
-        order: 4;
-    }
-
-    .services__list {
-        gap: 10px;
-    }
-
-    .services__list {
-        min-width: auto;
+        padding: 40px 72px;
     }
 
     .services__item {
         padding: 20px;
-        text-align: center;
     }
 
     .services__button {
-        margin: 0;
+        max-width: 385px;
         width: 100%;
-        background-color: #ffffff;
-        color: #F1721B;
         display: flex;
         justify-content: center;
     }
 }
 
-@media screen and (max-width: 1600px) {
-    .services {
-        max-width: 800px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 40px;
-    }
-
+@media screen and (max-width: 1281px) {
     .services__content-wrapper {
         display: flex;
-        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .services__content {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .services__list {
+        max-width: none;
+    }
+
+    .services__item {
+        max-width: none;
+        width: 100%;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .services__button {
+       margin: 0;
+       max-width: none;
+       width: 100%;
+       font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .services  {
+        padding: 40px 10px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .services__title {
-        text-align: center;
+        font-size: 48px;
         margin-bottom: 40px;
+    }
+
+    .services__item {
+        font-size: 24px;
+        line-height: 31.2px;
+    }
+
+    .services__item:hover {
+        color: inherit;
     }
 
     .services__content {
         display: none;
     }
 
-    .services__button {
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media screen and (max-width: 421px) {
-    .services {
-        padding: 40px 10px;
+    .services__list {
+        min-width: 100%;
+        width: 100%;
     }
 
-    .services__title {
-        text-align: start;
-    }
-
-    .services__item {
-        text-align: start;
-    }
-
-    .services__item {
-        font-size: 24px;
+    .services__content-wrapper {
+        margin-bottom: 40px;
     }
 
     .services__button {
-        padding: 14px 21px;
+        color: #F1721B;
         font-size: 26px;
+        padding: 14px 21px;
+        background-color: #ffffff;
     }
 }
