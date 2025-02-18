@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 
-.photos__item {
+.photos__icon {
     width: 580px;
     height: 616px;
 }
@@ -28,7 +28,7 @@
         margin: 0 0 100px 0;
     }
 
-    .photos__item {
+    .photos__icon {
         width: 370px;
         height: 392px;
     }

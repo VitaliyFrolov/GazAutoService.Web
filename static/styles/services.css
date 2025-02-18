@@ -122,6 +122,8 @@
 @media screen and (max-width: 701px) {
     .services  {
         padding: 40px 10px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .services__title {

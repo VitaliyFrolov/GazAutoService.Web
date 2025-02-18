@@ -61,10 +61,16 @@
     }
 
     .conditions__title {
-        font-size: 43px;
+        font-size: 40px;
     }
 
     .conditions__item-title {
         margin-bottom: 14px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .conditions {
+        margin-bottom: 100px;
     }
 }

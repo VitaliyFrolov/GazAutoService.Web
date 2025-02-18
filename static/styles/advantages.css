@@ -105,17 +105,18 @@
         font-family: 14px;
         line-height: 16.44px;
     }
-
-    .advantages-card-icon {
-        width: 40px;
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 901px)  {
     .advantages-card {
         max-width: 220px;
         padding: 20px 10px;
+        height: auto;
+    }
+
+    .advantages-card-icon {
+        width: 40px;
+        height: auto;
     }
 
     .advantages-card__content {
@@ -135,6 +136,19 @@
 }
 
 @media screen and (max-width: 701px) {
+    .advantages__title {
+        padding-left: 10px;
+    }
+
+    .advantages__info {
+        padding-left: 10px;
+    }
+
+    .advantages {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .advantages__list {
         display: flex;
         flex-direction: column;
