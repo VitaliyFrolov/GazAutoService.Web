@@ -72,6 +72,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr auto;
         position: relative;
+        order: 9;
     }
 
     .footer__content {

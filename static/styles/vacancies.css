@@ -108,6 +108,7 @@
     .vacancies {
         flex-direction: column;
         gap: 60px;
+        order: 8;
     }
 
     .vacancies__contact-title {
