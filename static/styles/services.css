@@ -92,17 +92,16 @@
 @media screen and (max-width: 1281px) {
     .services__content-wrapper {
         display: flex;
-        flex-direction: column;
-    }
-
-    .services__list {
-        order: 2;
+        flex-direction: column-reverse;
     }
 
     .services__content {
-        order: 1;
         font-size: 20px;
         line-height: 26px;
+    }
+
+    .services__list {
+        max-width: none;
     }
 
     .services__item {

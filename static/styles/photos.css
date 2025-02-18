@@ -12,8 +12,24 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 1920px) {
+.photos__item {
+    width: 580px;
+    height: 616px;
+}
+
+@media screen and (max-width: 1921px) {
     .photos {
         order: 7;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .photos {
+        margin: 0 0 100px 0;
+    }
+
+    .photos__item {
+        width: 370px;
+        height: 392px;
     }
 }
