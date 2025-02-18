@@ -9,21 +9,20 @@ from meta.meta import mainPageMeta
 from data.services import services
 from data.job import job
 from data.price import price_data, price_data_2
-import aiosmtplib
 import logging
 import os
 from dotenv import load_dotenv
 import aiofiles
+from aiogram import Bot
 
 load_dotenv()
 
-SMTP_SERVER = os.getenv("SMTP_SERVER")
-SMTP_PORT = int(os.getenv("SMTP_PORT"))
-SMTP_LOGIN = os.getenv("SMTP_LOGIN")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
-SMTP_EMAIL_TO = os.getenv('SMTP_EMAIL_TO')
+TG_BOT_TOKEN = os.getenv("TG_BOT")
+TG_CHAT_ID = int(os.getenv("TG_CHAT_ID"))
 
 app = FastAPI()
+
+bot = Bot(token=TG_BOT_TOKEN)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
@@ -42,35 +41,15 @@ async def price(request: Request):
 
 @app.post("/send", response_class=HTMLResponse)
 async def send(name: str = Form(...), phone: str = Form(...)):
-    email_content = f"""
-    <h2>Новая заявка с сайта</h2>
-    <p><strong>Имя:</strong> {name}</p>
-    <p><strong>Телефон:</strong> {phone}</p>
-    """
-
-    message = EmailMessage()
-    message["From"] = SMTP_LOGIN
-    message["To"] = SMTP_EMAIL_TO
-    message["Subject"] = "Новая заявка с сайта"
-    message.set_content(email_content, subtype="html")
-
+    text = f"📩 *Новая заявка с сайта*\n\n👤 *Имя:* {name}\n📞 *Телефон:* {phone}"
+    
     try:
-        logging.info(f"Отправка письма на {message['To']}...")
-        await aiosmtplib.send(
-            message,
-            hostname=SMTP_SERVER,
-            port=465,
-            username=SMTP_LOGIN,
-            password=SMTP_PASSWORD,
-            use_tls=True
-        )
-        logging.info("Письмо успешно отправлено!")
-
+        await bot.send_message(chat_id=TG_CHAT_ID, text=text, parse_mode="Markdown")
         return "<p class='success-message'>Заявка успешно отправлена!</p>"
-
+    
     except Exception as e:
-        logging.error(f"Ошибка отправки письма: {e}")
-        return f"<p class='error-message'>Во время отправки произошла ошибка, попробуйте позже</p>"
+        logging.error(f"Ошибка отправки в Telegram: {e}")
+        return "<p class='error-message'>Произошла ошибка, попробуйте позже</p>"
 
 
 @app.get('/privacy', response_class=PlainTextResponse)
