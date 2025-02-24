@@ -1,8 +1,6 @@
-function clearForm() {
+function clearForms() {
     setTimeout(() => {
-        const form = document.getElementById('content-form');
-        if (form) {
-            form.reset();
-        }
+        const forms = document.querySelectorAll('[data-form]');
+        forms.forEach((form) => form.reset());
     }, 500);
 }

@@ -17,6 +17,16 @@
     border-radius: 10px;
     padding: 26px;
     width: 100%;
+    position: relative;
+}
+
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .nav__wrapper {
