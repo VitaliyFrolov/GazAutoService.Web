@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const openButtons = document.querySelectorAll('.open-popup');
-    const closeButton = document.getElementById('closePopup');
-    const popupOverlay = document.getElementById('popupOverlay');
+    const closeButton = document.querySelector('[data-popup-close]');
+    const popupOverlay = document.querySelector('[data-popup-overlay]');
 
     const closePopup = () => {
         popupOverlay.style.display = 'none';
@@ -36,14 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('keydown', handleEscapeKey);
         }
     };
+
+    const submitButton = document.querySelector('[data-popup-close-on-submit]');
+    if (submitButton) {
+        submitButton.addEventListener('click', () => {
+            setTimeout(() => {
+                closePopup();
+            }, 1000);
+        });
+    }
 });
 
 const clearFormAndClosePopup = () => {
-    const form = document.getElementById('content-form');
+    const form = document.querySelector('[data-form]');
     if (form) {
         form.reset();
     }
-    closePopup(); 
 };
 
 const clearErrorMessages = () => {

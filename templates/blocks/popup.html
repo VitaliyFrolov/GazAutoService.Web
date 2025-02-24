@@ -1,11 +1,11 @@
-<div class="popup-overlay" id="popupOverlay">
+<div class="popup-overlay" data-popup-overlay>
     <div class="popup">
-        <button class="popup-close" id="closePopup">
+        <button class="popup-close" data-popup-close>
             <img src="/static/images/svg/exit-black.svg" width="40" height="40" alt="close popup menu" />
         </button>
         <div>
             <form
-                id="content-form"
+                data-form
                 hx-post="/send"
                 hx-target="#response"
                 hx-trigger="submit"
@@ -21,12 +21,12 @@
                     class="form__input" 
                     placeholder="+7 (___) ___-__-__" 
                     type="tel" 
-                    id="phone" 
+                    data-phone-input 
                     name="phone" 
                     required 
                     maxlength="18"
                 />
-                <button class="button form__button" type="submit">
+                <button class="button form__button" type="submit" data-popup-close-on-submit>
                     Получить консультацию
                 </button>
                 <a class="form__privacy_link" href="/privacy" target="_blank">
