@@ -34,7 +34,7 @@
     }
 
     .banner__title {
-        font-size: 29px;
+        font-size: 39px;
         line-height: 26px;
     }
 
@@ -52,6 +52,11 @@
     .banner__button {
         font-size: 18px;
         padding: 14px 20px;
+    }
+
+    .banner__title {
+        font-size: 29px;
+        line-height: 26px;
     }
 }
 

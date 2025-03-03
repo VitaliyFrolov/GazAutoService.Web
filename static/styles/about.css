@@ -34,8 +34,9 @@
 
 @media screen and (max-width: 1921px) {
     .about__title {
-        font-size: 51px;
+        font-size: 41px;
         margin-bottom: 60px;
+        line-height: normal;
     }
 
     .about__img {
