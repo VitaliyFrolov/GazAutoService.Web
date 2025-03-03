@@ -70,6 +70,7 @@
     width: 100%;
     max-width: 1180px;
     height: auto;
+    border-radius: 10px;
 }
 
 .form__img {
@@ -79,7 +80,9 @@
     height: 100%; 
     position: absolute;
     top: 0;
-    right: 0;
+    object-fit: contain; 
+    object-position: left;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 701px) {
