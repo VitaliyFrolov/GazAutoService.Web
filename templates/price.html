@@ -34,19 +34,18 @@
             </p>
         </section>
 
-        {% import 'mixins/price_list.html' as price_list %}
-
-        <section class="price">
-            {{ price_list.render_price(price['items'], price['title']) }}
-            {{ price_list.render_price(price_2['items'], price_2['title']) }}
-        </section>
+        <div class="price__tabs">
+            <ul class="price__tabs-list">
+                {% for tab in price['tabs'] %}
+                    <li class="price__tab" data-tab="{{ tab }}">{{ tab }}</li>
+                {% endfor %}
+            </ul>
+        </div>
         
-        {% include 'blocks/form.html' %}
+        <div class="price__sub-tabs"></div>
+        <div class="price__content"></div>
 
-        <section class="price">
-            {{ price_list.render_price(price_2['items'], price_2['title']) }}
-            {{ price_list.render_price(price_2['items'], price_2['title']) }}
-        </section>
+        {% include 'blocks/form.html' %}
         
         {% include 'blocks/footer.html' %}
     </body>
@@ -54,6 +53,6 @@
     <script src="/static/scripts/burgerMenu.js"></script>
     <script src="/static/scripts/phoneValidate.js"></script>
     <script src="/static/scripts/clearForm.js"></script>
-    <script src="/static/scripts/popup.js"></script>
     <script src="/static/scripts/sticky.js"></script>
+    <script src="/static/scripts/tabs.js"></script>
 </html>

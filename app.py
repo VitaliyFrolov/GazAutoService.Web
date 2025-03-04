@@ -8,7 +8,7 @@ import uvicorn
 from meta.meta import mainPageMeta
 from data.services import services
 from data.job import job
-from data.price import price_data, price_data_2
+from data.price import price_data
 import logging
 import os
 from dotenv import load_dotenv
@@ -36,8 +36,27 @@ async def price(request: Request):
     return templates.TemplateResponse("price.html", {
         "request": request,
         "price": price_data,
-        "price_2": price_data_2
     })
+
+@app.get("/price-content", response_class=HTMLResponse)
+async def price_content(tab: str):
+    items = price_data["items"].get(tab, [])
+    
+    if not items:
+        return "<p>Данные отсутствуют</p>"
+
+    html_content = "".join(
+        f"""
+        <div class="price__item">
+            <h3 class="price__item-title">{item["title"]}</h3>
+            <p class="price__item-price">{item["price"]} руб.</p>
+            <p class="price__item-subtitle">{item["subtitle"]}</p>
+        </div>
+        """
+        for item in items
+    )
+
+    return f"<div class='price__items'>{html_content}</div>"
 
 @app.post("/send", response_class=HTMLResponse)
 async def send(name: str = Form(...), phone: str = Form(...)):
@@ -132,6 +151,59 @@ async def job_content(index: int):
         </div>
         """
     return "Вакансия не найдена", 404
+
+@app.get("/sub-tabs", response_class=HTMLResponse)
+async def get_sub_tabs(main_tab: str):
+    """Возвращает вложенные табы (типы ремонта) для выбранной модели"""
+    items = price_data.get("items", {})
+
+    if main_tab not in items:
+        return "<p>Нет данных</p>"
+
+    sub_tabs = [item["title"] for item in items[main_tab] if "title" in item]
+    
+    if not sub_tabs:
+        return "<p>Нет данных</p>"
+
+    html = "".join(
+        f'<li class="sub-tab" data-subtab="{sub_tab}">{sub_tab}</li>'
+        for sub_tab in sub_tabs
+    )
+
+    return f"<ul class='sub-tabs'>{html}</ul>"
+
+@app.get("/services", response_class=HTMLResponse)
+async def get_services(main_tab: str, sub_tab: str):
+    """Получаем все данные по выбранной модели и подкатегории"""
+    logging.info(f"Получен запрос: main_tab={main_tab}, sub_tab={sub_tab}")
+    items = price_data.get("items", {})
+
+    if main_tab not in items:
+        logging.error(f"Не найден main_tab: {main_tab}")
+        return "<p>Нет данных</p>"
+
+    services = []
+    for category in items[main_tab]:
+        if isinstance(category, dict) and category.get("title") == sub_tab:
+            for sub_category in category.get("items", []):
+                if sub_category.get("service"):
+                    services.append(sub_category)
+
+    if not services:
+        logging.error(f"Не найдено услуг для main_tab={main_tab} и sub_tab={sub_tab}")
+        return "<p>Нет данных</p>"
+
+    html = "".join(
+        f"""
+        <li class="price-content__item">
+            <p class="price-content__name">{service.get("service", "")}</p>
+            <p class="price-content__price">{service.get("price", "0")} руб.</p>
+        </li>
+        """
+        for service in services
+    )
+
+    return f"<ul class='price-content__list'>{html}</ul>"
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

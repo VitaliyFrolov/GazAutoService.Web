@@ -19,6 +19,13 @@
     width: 100%;
 }
 
+.services__content-link {
+    display: flex;
+    margin-top: 20px;
+    color: #F1721B;
+    text-decoration: underline;
+}
+
 .services__content-wrapper {
     display: flex;
     justify-content: space-between;
