@@ -38,7 +38,6 @@ async def price(request: Request):
         "price": price_data,
     })
 
-## Возможно убрать
 @app.get("/price-content", response_class=HTMLResponse)
 async def price_content(tab: str):
     items = price_data["items"].get(tab, [])
@@ -161,7 +160,7 @@ async def get_sub_tabs(main_tab: str):
     if main_tab not in items:
         return "<p>Нет данных</p>"
 
-    sub_tabs = [item["title"] for item in items[main_tab]]
+    sub_tabs = [item["title"] for item in items[main_tab] if "title" in item]
     
     if not sub_tabs:
         return "<p>Нет данных</p>"
@@ -185,7 +184,7 @@ async def get_services(main_tab: str, sub_tab: str):
 
     services = []
     for category in items[main_tab]:
-        if isinstance(category, dict) and category.get("title"):
+        if isinstance(category, dict) and category.get("title") == sub_tab:
             for sub_category in category.get("items", []):
                 if sub_category.get("service"):
                     services.append(sub_category)
@@ -196,16 +195,15 @@ async def get_services(main_tab: str, sub_tab: str):
 
     html = "".join(
         f"""
-        <div class="service-item">
-            <p class="service-name">{service.get("service", "")}</p>
-            <p class="service-price">{service.get("price", "0")} руб.</p>
-        </div>
+        <li class="price-content__item">
+            <p class="price-content__name">{service.get("service", "")}</p>
+            <p class="price-content__price">{service.get("price", "0")} руб.</p>
+        </li>
         """
         for service in services
     )
 
-    return f"<div class='services-list'>{html}</div>"
-
+    return f"<ul class='price-content__list'>{html}</ul>"
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
