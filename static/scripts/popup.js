@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const openButtons = document.querySelectorAll('.open-popup');
     const closeButton = document.querySelector('[data-popup-close]');
     const popupOverlay = document.querySelector('[data-popup-overlay]');
-
     const closePopup = () => {
         popupOverlay.style.display = 'none';
         document.body.classList.remove('no-scroll');
