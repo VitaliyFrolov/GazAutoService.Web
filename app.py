@@ -157,11 +157,15 @@ async def get_sub_tabs(main_tab: str):
     """Возвращает вложенные табы (типы ремонта) для выбранной модели"""
     items = price_data.get("items", {})
 
+    logging.info(f"Получен main_tab: '{main_tab}'")
+    logging.info(f"Доступные ключи: {list(items.keys())}")
+
     if main_tab not in items:
+        logging.error(f"main_tab '{main_tab}' не найден в price_data")
         return "<p>Нет данных</p>"
 
     sub_tabs = [item["title"] for item in items[main_tab] if "title" in item]
-    
+
     if not sub_tabs:
         return "<p>Нет данных</p>"
 
@@ -171,6 +175,7 @@ async def get_sub_tabs(main_tab: str):
     )
 
     return f"<ul class='sub-tabs'>{html}</ul>"
+
 
 @app.get("/services", response_class=HTMLResponse)
 async def get_services(main_tab: str, sub_tab: str):
