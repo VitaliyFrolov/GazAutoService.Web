@@ -29,14 +29,18 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, **mainPageMeta})
-
-@app.get("/price", response_class=HTMLResponse)
-async def price(request: Request):
-    return templates.TemplateResponse("price.html", {
+    return templates.TemplateResponse("index.html", {
         "request": request,
+        **mainPageMeta,
         "price": price_data,
     })
+
+# @app.get("/price", response_class=HTMLResponse)
+# async def price(request: Request):
+#     return templates.TemplateResponse("price.html", {
+#         "request": request,
+#         "price": price_data,
+#     })
 
 @app.get("/price-content", response_class=HTMLResponse)
 async def price_content(tab: str):
