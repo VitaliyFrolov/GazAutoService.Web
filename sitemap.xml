@@ -5,9 +5,4 @@
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
-    <url>
-        <loc>https://gazautoservis.spb.ru/price</loc>
-        <priority>0.9</priority>
-        <changefreq>weekly</changefreq>
-    </url>
 </urlset>

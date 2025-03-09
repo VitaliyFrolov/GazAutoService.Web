@@ -89,7 +89,7 @@
     .form {
         flex-direction: column-reverse;
         align-items: center;
-        order: 5;
+        order: 9;
     }
 
     .form__img-wrapper {
