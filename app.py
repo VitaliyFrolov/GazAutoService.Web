@@ -1,6 +1,6 @@
 from email.message import EmailMessage
 from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse, PlainTextResponse
+from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
@@ -35,12 +35,14 @@ async def index(request: Request):
         "price": price_data,
     })
 
-# @app.get("/price", response_class=HTMLResponse)
-# async def price(request: Request):
-#     return templates.TemplateResponse("price.html", {
-#         "request": request,
-#         "price": price_data,
-#     })
+@app.get("/yandex_30e143609917faca.html", response_class=HTMLResponse)
+async def get_yandex_file():
+    file_path = os.path.join("templates", "yandex_30e143609917faca.html")
+    
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    else:
+        return HTMLResponse("<p>Файл не найден</p>", status_code=404)
 
 @app.get("/price-content", response_class=HTMLResponse)
 async def price_content(tab: str):
