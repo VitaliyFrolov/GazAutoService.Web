@@ -1,4 +1,126 @@
 .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+}
+
+.header__content-wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 171px;
+    height: 88px;
+}
+
+.header__title {
+    display: flex;
+    font-size: 42px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #434341;
+    text-align: center;
+}
+
+.header__social-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.header__social-item_location {
+    display: flex;
+    gap: 8px;
+    margin-right: 20px;
+}
+
+.header__social-item-location-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header__social-item_location-text {
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #434341;
+}
+
+.header__mail-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 20px;
+}
+
+.header__phone {
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #000000;
+}
+
+.header__mail {
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #4F4E4C;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.header__nav-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #F5F6F9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nav {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.nav__item {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.nav__item:hover {
+    color: #F1721B;
+}
+
+.header__button {
+    border: none;
+    border-radius: 10px;
+    background: #F1721B;
+    color: white;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    padding: 14px 77px;
+    white-space: nowrap;
+}
+
+/* .header {
     padding: 12px 30px;
     margin-bottom: 50px;
     display: flex;
@@ -279,4 +401,5 @@
         gap: 10px;
         order: 2;
     }
-}
+} */
+
