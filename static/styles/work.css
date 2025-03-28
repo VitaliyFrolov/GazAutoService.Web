@@ -11,7 +11,6 @@
     font-weight: 500;
     line-height: 130%;
     text-align: start;
-    white-space: nowrap;
 }
 
 .work__list {
@@ -45,7 +44,6 @@
         font-size: 48px;
         line-height: 130%;
         margin-bottom: 60px;
-        white-space: normal;
     } 
 
     .work__list {
@@ -83,7 +81,6 @@
         line-height: 36.4px;
         margin-bottom: 40px;
         padding: 0;
-        white-space: normal;
     } 
 
     .work__slider {
