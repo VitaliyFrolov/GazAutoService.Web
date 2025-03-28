@@ -1,33 +1,51 @@
 <section class="work" id="work-block">
-    <h3 class="title work__title">
-        Мы работаем с частными лицами <br /> и корпоративными клиентами
-    </h3>
+    <h2 class="title work__title">
+        Мы работаем с&nbsp;частными&nbsp;лицами и&nbsp;корпоративными клиентами
+    </h2>
     <ul class="work__list">
         <li>
-            <img src="static/images/next.png" width="440" height="156" alt="Next" />
+            <img src="static/images/lada.png" width="280" height="138" alt="Next" />
         </li>
         <li>
-            <img src="static/images/yaz.png" width="280" height="174" alt="Уаз" />
+            <img src="static/images/yaz.png" width="280" height="84" alt="Уаз" />
         </li>
         <li>
-            <img src="static/images/gazel.png" width="430" height="96" alt="Газель" />
+            <img src="static/images/gazel.png" width="280" height="138" alt="Газель" />
         </li>
         <li>
-            <img src="static/images/lada.png" width="291" height="204" alt="Lada" />
+            <img src="static/images/next.png" width="280" height="138" alt="Lada" />
         </li>
         <li>
-            <img src="static/images/valday.png" width="280" height="122" alt="Ваадай" />
+            <img src="static/images/valday.png" width="280" height="138" alt="Валдай" />
         </li>
     </ul>
-    {% from 'mixins/slider.html' import slider %}
+    <!-- {% from 'mixins/slider.html' import slider %} -->
 
-    <div class="work__slider">
-        {{ slider([
-            'static/images/next.png',
+    <ul class="work__slider">
+        <li>
+            <img src="static/images/lada.png" width="188" height="64" alt="Next" />
+        </li>
+        <li>
+            <img src="static/images/yaz.png" width="104" height="64" alt="Уаз" />
+        </li>
+        <li>
+            <img src="static/images/gazel.png" width="264" height="59" alt="Газель" />
+        </li>
+        <li>
+            <img src="static/images/next.png" width="321" height="120" alt="Lada" />
+        </li>
+        <li>
+            <img src="static/images/valday.png" width="212" height="92" alt="Валдай" />
+        </li>
+    </ul>
+
+
+        <!-- {{ slider([
+            'static/images/lada.png',
             'static/images/yaz.png',
             'static/images/gazel.png',
-            'static/images/lada.png',
+            'static/images/next.png',
             'static/images/valday.png'
-        ]) }}
+        ]) }} -->
     </div>        
 </section>
