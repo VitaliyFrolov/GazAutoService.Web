@@ -44,19 +44,25 @@ async def get_yandex_file():
     else:
         return HTMLResponse("<p>Файл не найден</p>", status_code=404)
 
+import logging
+
 @app.get("/price-content", response_class=HTMLResponse)
 async def price_content(tab: str):
     items = price_data["items"].get(tab, [])
-    
+
     if not items:
         return "<p>Данные отсутствуют</p>"
+
+    for item in items:
+        if "price" not in item:
+            logging.warning(f"Отсутствует 'price' в элементе: {item}")
 
     html_content = "".join(
         f"""
         <div class="price__item">
-            <h3 class="price__item-title">{item["title"]}</h3>
-            <p class="price__item-price">{item["price"]} руб.</p>
-            <p class="price__item-subtitle">{item["subtitle"]}</p>
+            <h3 class="price__item-title">{item.get("title", "Нет названия")}</h3>
+            <p class="price__item-price">{item.get("price", "Цена не указана")} руб.</p>
+            <p class="price__item-subtitle">{item.get("subtitle", "")}</p>
         </div>
         """
         for item in items
