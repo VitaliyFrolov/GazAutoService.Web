@@ -1,5 +1,4 @@
 .work {
-    margin-bottom: 140px;
     padding: 0 70px;
     line-height: 130%;
 }
@@ -71,7 +70,7 @@
 /* Mobile version */
 @media screen and (max-width: 768px) {
     .work {
-        /* margin: 0 10px 60px 10px; */
+        margin: 0;
         padding: 20 20px;
     }
 

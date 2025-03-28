@@ -84,6 +84,13 @@
     .photos__slide {
         flex: 0 0 100%;
     }
+    .photos__slide {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .photos__slides-wrapper {
+        width: 100%;
+    }
     
     .photos__arrow {
         display: none;
@@ -91,5 +98,13 @@
     
     .photos__pagination-line {
         width: 30px;
+    }
+}
+
+@media (max-width: 470px) {
+    .photos__slide {
+        flex: 0 0 100%;
+        width: 370px;
+        height: 556px;
     }
 }
