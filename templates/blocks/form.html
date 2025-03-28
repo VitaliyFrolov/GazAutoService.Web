@@ -11,29 +11,33 @@
         class="form__form"
         hx-swap="innerHTML"
     >
+    <div class="form__container">
         <h3 class="form__title">
-            Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
+            Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
         </h3>
-        <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
-        <input 
-            class="form__input" 
-            placeholder="+7 (___) ___-__-__" 
-            type="tel" 
-            data-phone-input
-            name="phone" 
-            required 
-            maxlength="18"
-        />
-
-        <button class="button form__button" type="submit">
-            Получить консультацию
-        </button>
-        <a class="form__privacy_link" href="/privacy" target="_blank">
-            Нажимая на кнопку, вы даете согласие на обработку <br /> <span class="form__privacy">Персональных данных</span>
-        </a>
+        
+        <div class="form__form">
+            <div class="form__row">
+                <!-- Поле имени -->
+                <div class="form__input-container">
+                    <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
+                </div>
+                
+                <!-- Поле телефона -->
+                <div class="form__input-container">
+                    <input class="form__input" placeholder="Телефон" type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <!-- Кнопка с privacy link -->
+                <div class="form__button-container">
+                    <button class="form__button" type="submit">Получить консультацию</button>
+                    <a class="form__privacy_link" href="/privacy" target="_blank">
+                        Нажимая на кнопку, вы даете согласие на обработку</br>
+                        <span class="form__privacy">Персональных данных</span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div id="response" hx-swap="outerHTML"></div>
     </form>
-    <picture class="form__img-wrapper">
-        <img class="form__img" src="/static/images/form-img.png" alt="image" />
-    </picture>
 </section>
