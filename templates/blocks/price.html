@@ -1,19 +1,34 @@
 <section class="price__main-info" id="price-block">
     <h2 class="title price__title">
-        Мы работаем с частными лицами <br /> и корпоративными клиентами
+        Наши услуги
     </h2>
-    <p class="price__text">
-        Мы предлагаем профессиональное обслуживание коммерческого транспорта с <br /> минимальными простоями и гарантией надежности. Наши специалисты обладают <br /> глубокими знаниями и опытом работы с коммерческим автопарком, что позволяет <br /> обеспечивать точную диагностику, оперативный ремонт и техобслуживание.
-    </p>
+
+    <div class="price__select">
+        <select class="price__dropdown" 
+                id="tab-select"
+                name="tab"
+                hx-get="/price-content"
+                hx-target=".price__content"
+                hx-swap="innerHTML"
+                hx-trigger="change">
+            <option class="price__tabs-list" value="" disabled selected>Выберите марку</option>
+            {% for tab in price['tabs'] %}
+                <option class="price__tab" data-tab="{{ tab }}" value="{{ tab }}">{{ tab }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="price__content-wrapper">
+        <div class="price__tabs">
+            <ul class="price__tabs-list">
+                {% for tab in price['tabs'] %}
+                    <li class="price__tab" data-tab="{{ tab }}">{{ tab }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <div class="price__sub-tabs"></div>
+            <div class="price__content"></div>
+        </div>
+    </div>
 </section>
-
-<div class="price__tabs">
-    <ul class="price__tabs-list">
-        {% for tab in price['tabs'] %}
-            <li class="price__tab" data-tab="{{ tab }}">{{ tab }}</li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div class="price__sub-tabs"></div>
-<div class="price__content"></div>

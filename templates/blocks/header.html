@@ -1,50 +1,53 @@
 <header class="header">
-   <a class="header__logo-link" href="/">
-      <picture>
-         <img class="header__logo" src="static/images/logo.png" alt="logo" />
-      </picture>
-   </a>
-   <div class="nav__wrapper">
-      <div class="header__social-wrapper">
-         <ul class="header__social-list">
-            <li class="header__social-item header__social-item_location">
-               <a class="header__social-item_location-text" href="https://yandex.ru/maps/org/gazavtoservis/86278392582?si=nn2p79nb7gn1bj01ctdjve3rq0" target="_blank">
-                  Ленинградская область, Всеволожский <br /> район, Заневское городское поселение
-               </a>
+   <div class="header__content-wrapper">
+      <a class="header__logo-link" href="/">
+         <picture>
+            <img class="header__logo" src="static/images/logo.svg" alt="logo" />
+         </picture>
+      </a>
+      <h1 class="header__title">
+         Ремонт автомобилей семейства ГАЗ
+      </h1>
+      <ul class="header__social-list">
+         <li class="header__social-item header__social-item_location header__social-item_location header__social-item_location-wrapper">
+            <h2 class="header__social-item_title">
+               Ремонт автомобилей семейства ГАЗ
+            </h2>
+            <div class="header__social-item_location header__social-item_title-wrapper">
                <a href="https://yandex.ru/maps/org/gazavtoservis/86278392582?si=nn2p79nb7gn1bj01ctdjve3rq0" target="_blank">
-                  <img src="static/images/svg/location-icon-header.svg" width="42" height="42" alt="location" />
+                  <img class="header__social-item-location-icon" src="static/images/svg/location-icon-header.svg" width="42" height="42" alt="location" />
                </a>
-            </li>
-            <li class="header__social-item">
-               <a href="https://api.whatsapp.com/send/?phone=89119233788&text&type=phone_number&app_absent=0" target="_blank">
-                  <img class="header__social-icon" src="static/images/svg/whatsapp-icon.svg" alt="whatsapp" />
+               <a class="header__social-item_location-text" href="https://yandex.ru/maps/org/gazavtoservis/86278392582?si=nn2p79nb7gn1bj01ctdjve3rq0" target="_blank">
+                  Ленинградская область, Заневское городское поселение
                </a>
-            </li>
-            <li class="header__social-item">
-               <a href="https://m.vk.com/club218435158" target="_blank">
-                  <img class="header__social-icon" src="static/images/svg/vk-icon.svg" alt="vk" />
-               </a>
-            </li>
-            <li class="header__social-item">
-               <a href="https://t.me/+7 911 923 3788" target="_blank">
-                  <img class="header__social-icon" src="static/images/svg/telegram-icon.svg" alt="telegram" />
-               </a>
-            </li>
-         </ul>
-         <div class="header__mail-wrapper">
-            <span class="header__phone">
-               <a href="tel:+78129233788">
-                  +7 812 923 37 88
-               </a>
-            </span>
+            </div>
+         </li>
+         <li class="header__social-item header__social-item_whatsapp">
+            <a href="https://api.whatsapp.com/send/?phone=89119233788&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+               <img class="header__social-icon" src="static/images/svg/whatsapp-icon.svg" alt="whatsapp" />
+            </a>
+         </li>
+         <li class="header__social-item header__social-item_vk">
+            <a href="https://m.vk.com/club218435158" target="_blank">
+               <img class="header__social-icon" src="static/images/svg/vk-icon.svg" alt="vk" />
+            </a>
+         </li>
+         <li class="header__social-item header__social-item_tg">
+            <a href="https://t.me/GazAvtoServis" target="_blank">
+               <img class="header__social-icon" src="static/images/svg/telegram-icon.svg" alt="telegram" />
+            </a>
+         </li>
+         <li class="header__mail-wrapper">
+            <a href="tel:+78129233788" class="header__phone">
+               +7 812 923 37 88
+            </a>
             <a class="header__mail" href="mailto:Gazservisspb@yandex.ru">
                Gasservisspb@yandex.ru
             </a>
-         </div>
-         <button class="header__burger-menu">
-            <img class="header__burger-menu-icon" src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
-         </button>
-      </div>
+         </li>
+      </ul>
+   </div>
+   <div class="header__nav-wrapper">
       <nav class="nav">
          <ul class="nav__list">
             <li class="nav__item"><a href="/">О нас</a></li>
@@ -53,6 +56,12 @@
             <li class="nav__item"><a href="/#price-block">Цены</a></li>
             <li class="nav__item"><a href="/#contact-blockk">Контакты</a></li>
          </ul>
+         <button class="header__burger-menu">
+            <img class="header__burger-menu-icon" src="static/images/svg/burger-menu.svg" width="40" height="40" alt="burger menu"/>
+         </button>
+         <button class="header__button open-popup">
+            Записаться на сервис
+         </button>
       </nav>
    </div>
 </header>
