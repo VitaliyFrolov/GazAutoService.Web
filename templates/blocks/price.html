@@ -2,6 +2,22 @@
     <h2 class="title price__title">
         Наши услуги
     </h2>
+
+    <div class="price__select">
+        <select class="price__dropdown" 
+                id="tab-select"
+                name="tab"
+                hx-get="/price-content"
+                hx-target=".price__content"
+                hx-swap="innerHTML"
+                hx-trigger="change">
+            <option class="price__tabs-list" value="" disabled selected>Выберите марку</option>
+            {% for tab in price['tabs'] %}
+                <option class="price__tab" data-tab="{{ tab }}" value="{{ tab }}">{{ tab }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
     <div class="price__content-wrapper">
         <div class="price__tabs">
             <ul class="price__tabs-list">
