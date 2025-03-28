@@ -6,6 +6,7 @@
 .contacts__container {
     margin: 0 auto;
     padding: 50px 60px 70px;
+    gap: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -143,6 +144,7 @@
 @media (max-width: 1024px) {
     .contacts {
         padding: 40px 0;
+        gap: 20px;
     }
     
     .contacts__container {
@@ -167,7 +169,7 @@
 
 @media (max-width: 768px) {
     .contacts {
-        padding: 80px 0;
+        padding: 20px 0;
     }
     
     .contacts__title {
@@ -186,7 +188,7 @@
 
 @media (max-width: 480px) {
     .contacts {
-        padding: 60px 20px;
+        padding: 10px;
     }
     
     .contacts__container {
