@@ -1,24 +1,84 @@
+<!-- photos.html -->
 <section class="photos">
-    <ul class="photos__list">
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto1.png" alt="photo gaz auto" />
-        </li>
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto2.png" alt="photo gaz auto" />
-        </li>
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto3.png" alt="photo gaz auto" />
-        </li>
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto4.jpeg" alt="photo gaz auto" />
-        </li>
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto5.jpeg" alt="photo gaz auto" />
-        </li>
-        <li class="photos__item">
-            <img class="photos__icon" src="static/images/photo_auto6.jpeg" alt="photo gaz auto" />
-        </li>
-    </ul>
-    {% from 'mixins/slider.html' import slider %}
-
+    <div class="photos__container">
+        <div class="photos__slider">
+            <div class="photos__slides-wrapper">
+                <div class="photos__slides">
+                    <!-- Ваши фотографии -->
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto1.png" alt="Фото авто 1">
+                    </div>
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto2.png" alt="Фото авто 1">
+                    </div>
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto3.png" alt="Фото авто 1">
+                    </div>
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto4.png" alt="Фото авто 1">
+                    </div>
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto5.png" alt="Фото авто 1">
+                    </div>
+                    <div class="photos__slide">
+                        <img src="static/images/photo_auto6.png" alt="Фото авто 1">
+                    </div>
+                    <!-- ... остальные слайды ... -->
+                </div>
+            </div>
+        </div>
+        <div class="photos__pagination"></div>
+    </div>
 </section>
+
+
+<script>// static/js/slider.js
+    document.addEventListener('DOMContentLoaded', function() {
+        const slidesWrapper = document.querySelector('.photos__slides-wrapper');
+        const slides = document.querySelector('.photos__slides');
+        const slideItems = document.querySelectorAll('.photos__slide');
+        const pagination = document.querySelector('.photos__pagination');
+        const prevBtn = document.querySelector('.photos__arrow--prev');
+        const nextBtn = document.querySelector('.photos__arrow--next');
+        
+        let currentIndex = 0;
+        const slideWidth = slideItems[0].offsetWidth + 20; // Ширина слайда + gap
+        const wrapperWidth = slidesWrapper.offsetWidth;
+        const totalSlidesWidth = slideItems.length * slideWidth;
+        
+        // Рассчитываем максимально возможное смещение
+        const maxOffset = Math.max(0, totalSlidesWidth - wrapperWidth - 20); // -20 для компенсации padding-right
+        
+        // Создаем линии пагинации
+        slideItems.forEach((_, index) => {
+            const line = document.createElement('div');
+            line.classList.add('photos__pagination-line');
+            if(index === 0) line.classList.add('active');
+            line.addEventListener('click', () => goToSlide(index));
+            pagination.appendChild(line);
+        });
+        
+        // Функция переключения слайдов
+        function goToSlide(index) {
+            currentIndex = index;
+            let offset = currentIndex * slideWidth;
+            
+            // Ограничиваем смещение, чтобы не уходить в белое пространство
+            offset = Math.min(offset, maxOffset);
+            
+            slides.style.transform = `translateX(-${offset}px)`;
+            
+            // Обновляем активную линию
+            document.querySelectorAll('.photos__pagination-line').forEach((line, i) => {
+                line.classList.toggle('active', i === currentIndex);
+            });
+            
+            // Блокируем кнопки при достижении границ
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = offset >= maxOffset;
+        }
+        
+        // Остальной код (кнопки, автопрокрутка) без изменений
+        // ...
+    });
+</script>
