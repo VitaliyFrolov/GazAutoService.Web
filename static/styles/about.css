@@ -4,7 +4,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    padding: 40px 70px;
+    padding: 0px 70px;
 }
 
 .about__banner {
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Затемнение для лучшей читаемости текста */
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 16px;
 }
 
@@ -83,7 +83,7 @@
 /* Адаптация */
 @media screen and (max-width: 1200px) {
     .about {
-        padding: 40px 0px;
+        padding: 0px;
         border-radius: 0 ;
     }
 
@@ -107,6 +107,11 @@
 }
 
 @media screen and (max-width: 992px) {
+    .about {
+        padding: 0px;
+        border-radius: 0;
+    }
+
     .about__banner {
         min-height: 500px;
     }
@@ -121,6 +126,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    .about {
+        padding: 0px;
+        border-radius: 0;
+    }
+
     .about__banner {
         min-height: 400px;
     }
@@ -147,6 +157,11 @@
 }
 
 @media screen and (max-width: 576px) {
+    .about {
+        padding: 0px;
+        border-radius: 0;
+    }
+
     .about__banner {
         min-height: 350px;
     }
