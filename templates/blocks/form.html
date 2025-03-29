@@ -11,33 +11,45 @@
         class="form__form"
         hx-swap="innerHTML"
     >
-    <div class="form__container">
-        <h3 class="form__title">
-            Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
-        </h3>
-        
-        <div class="form__form">
-            <div class="form__row">
-                <!-- Поле имени -->
-                <div class="form__input-container">
-                    <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
-                </div>
-                
-                <!-- Поле телефона -->
-                <div class="form__input-container">
-                    <input class="form__input" placeholder="Телефон" type="tel" id="phone" name="phone" required>
-                </div>
-                
-                <!-- Кнопка с privacy link -->
-                <div class="form__button-container">
-                    <button class="form__button" type="submit">Получить консультацию</button>
-                    <a class="form__privacy_link" href="/privacy" target="_blank">
-                        Нажимая на кнопку, вы даете согласие на обработку</br>
-                        <span class="form__privacy">Персональных данных</span>
-                    </a>
+        <div class="form__container">
+            <h3 class="form__title">
+                Мы всегда рады ответить на любые ваши вопросы и помочь с решением проблем!
+            </h3>
+            
+            <div class="form__form">
+                <div class="form__row">
+                    <div class="form__input-container">
+                        <input class="form__input" placeholder="Имя" type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form__input-container">
+                        <input class="form__input" 
+                               placeholder="Телефон" 
+                               type="tel" 
+                               id="phone" 
+                               name="phone" 
+                               required
+                               data-phone-input>
+                    </div>
+                    
+                    <div class="form__button-container">
+                        <button class="form__button" type="submit">Получить консультацию</button>
+                        <a class="form__privacy_link" href="/privacy" target="_blank">
+                            Нажимая на кнопку, вы даете согласие на обработку</br>
+                            <span class="form__privacy">Персональных данных</span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div id="response" hx-swap="outerHTML"></div>
         </div>
-        <div id="response" hx-swap="outerHTML"></div>
     </form>
 </section>
+
+<script>
+    document.body.addEventListener('htmx:afterSwap', () => {
+        const script = document.createElement('script');
+        script.src = '/static/js/phone-validation.js';
+        document.body.appendChild(script);
+    });
+</script>
