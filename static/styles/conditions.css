@@ -67,8 +67,11 @@
 /* Tablet version */
 @media screen and (max-width: 1280px) {
     .conditions {
-        padding: 80px 0;
-        margin-bottom: 80px;
+        padding: 0;
+    }
+    
+    .conditions__container {
+        padding: 10px 30px;
     }
 
     .conditions__title {
@@ -86,7 +89,6 @@
 
     .conditions__list {
         grid-template-columns: repeat(2, 1fr);
-        padding: 0 20px;
     }
 
     .conditions__item {
@@ -122,7 +124,6 @@
         font-size: 28px;
         line-height: 36.4px;
         text-align: left;
-        padding: 0 20px;
         margin-bottom: 30px;
     }
 
