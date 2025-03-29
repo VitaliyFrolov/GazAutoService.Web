@@ -163,7 +163,8 @@
 /* Адаптация для мобильных (480px) */
 @media (max-width: 480px) {
     .form {
-        padding: 20px 20px;
+        padding: 0;
+        margin-bottom: 20px;
     }
     
     .form__form {

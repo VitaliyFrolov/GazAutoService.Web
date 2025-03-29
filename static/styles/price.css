@@ -162,8 +162,38 @@
         flex-direction: column;
     }
 
+    @media screen and (max-width: 1024px) {
+        .price__main-info {
+            margin-left: 22px;
+            margin-right: 22px;
+            margin-bottom: 40px;
+        }
+    }
+
     /* mobile */
     @media screen and (max-width: 743px) {
+        .price__title {
+            margin-bottom:0px;
+            font-size: 40px;
+            line-height: 130%;
+        }
+
+        .price__dropdown {
+            padding: 8px 11px;
+            font-size: 21px;
+        }
+
+        .price__select {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .price__main-info {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 80px;
+        }
         .price__title {
             margin-bottom: 20px;
             font-size: 40px;
