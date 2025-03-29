@@ -159,6 +159,11 @@
     display: none;
 }
 
+.header__social-item-location-icon-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
 /* tablet */
 @media screen and (max-width: 1879px) {
     .header {
