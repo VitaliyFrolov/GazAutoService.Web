@@ -20,7 +20,6 @@
     line-height: 1.1;
     letter-spacing: -1px;
     text-align: center;
-    font-family: 'Inter', sans-serif;
 }
 
 .form__columns {
@@ -58,7 +57,6 @@
     font-size: 18px;
     color: #333;
     transition: all 0.3s;
-    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
@@ -88,7 +86,6 @@
     transition: all 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Inter', sans-serif;
 }
 
 .form__button:hover {
@@ -101,7 +98,6 @@
     font-size: 15px;
     line-height: 1.6;
     text-align: center;
-    font-family: 'Inter', sans-serif;
     width: 100%;
 }
 
@@ -112,7 +108,7 @@
 }
 
 /* Адаптация для планшетов (1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .form {
         padding: 40px 22px;
     }
@@ -163,7 +159,8 @@
 /* Адаптация для мобильных (480px) */
 @media (max-width: 480px) {
     .form {
-        padding: 20px 20px;
+        padding: 0;
+        margin-bottom: 20px;
     }
     
     .form__form {

@@ -78,7 +78,17 @@
 }
 
 /* Адаптивность */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
+    .advantages__container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .advantages {
+        padding: 30px 22px;
+    }
+
     .advantages-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -102,18 +112,8 @@
 }
 
 @media (max-width: 768px) {
-    .advantages__container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0px;
-    }
-
     .advantages {
         padding: 30px 22px;
-    }
-    
-    .advantages {
-        padding: 60px 0;
     }
     
     .advantages__container {
