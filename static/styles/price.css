@@ -136,6 +136,11 @@
         -moz-appearance: none;
         cursor: pointer;
         font-size: 26px;
+        color: black;
+    }
+
+    .price__dropdown option:checked {
+        color: #000000;
     }
     
     .price__select::after {
@@ -157,6 +162,11 @@
         padding: 14px 11px;
         border: none;
         border-radius: 5px;
+        color: black;
+    }
+
+    .price__dropdown option:checked {
+        color: black;
     }
 
     .price__tabs {
@@ -184,6 +194,11 @@
         .price__dropdown {
             padding: 8px 11px;
             font-size: 21px;
+            color: black;
+        }
+
+        .price__dropdown option:checked {
+            color: black;
         }
 
         .price__select {
