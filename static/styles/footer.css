@@ -35,7 +35,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2;
-    font-family: 'Inter', sans-serif;
 }
 
 .footer__company-address {
@@ -43,7 +42,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    font-family: 'Inter', sans-serif;
 }
 
 /* Навигация */
@@ -72,7 +70,6 @@
     line-height: 1.2;
     text-decoration: none;
     transition: color 0.3s;
-    font-family: 'Inter', sans-serif;
 }
 
 .footer__nav-link:hover {
@@ -121,7 +118,6 @@
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
     transition: color 0.3s;
 }
 
@@ -151,7 +147,6 @@
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s;
-    font-family: 'Inter', sans-serif;
 }
 
 .footer__button:hover {
