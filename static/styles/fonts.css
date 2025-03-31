@@ -1,8 +1,8 @@
 /* Regular */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
-         url('../fonts/Raleway-Regular.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,9 +10,9 @@
 
 /* Bold */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-         url('../fonts/Raleway-Bold.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+         url('../fonts/Roboto-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -20,9 +20,9 @@
 
 /* Italic */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Italic.woff2') format('woff2'),
-         url('../fonts/Raleway-Italic.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+         url('../fonts/Roboto-Italic.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -30,9 +30,9 @@
 
 /* Bold Italic */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-BoldItalic.woff2') format('woff2'),
-         url('../fonts/Raleway-BoldItalic.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BoldItalic.woff2') format('woff2'),
+         url('../fonts/Roboto-BoldItalic.woff') format('woff');
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -40,9 +40,9 @@
 
 /* ExtraLight (100) */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-ExtraLight.woff2') format('woff2'),
-         url('../fonts/Raleway-ExtraLight.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-ExtraLight.woff2') format('woff2'),
+         url('../fonts/Roboto-ExtraLight.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -50,9 +50,9 @@
 
 /* Light (300) */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Light.woff2') format('woff2'),
-         url('../fonts/Raleway-Light.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+         url('../fonts/Roboto-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -60,9 +60,9 @@
 
 /* SemiBold (600) */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
-         url('../fonts/Raleway-SemiBold.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-SemiBold.woff2') format('woff2'),
+         url('../fonts/Roboto-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -70,16 +70,66 @@
 
 /* ExtraBold (800) */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
-         url('../fonts/Raleway-ExtraBold.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-ExtraBold.woff2') format('woff2'),
+         url('../fonts/Roboto-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
-body {
-    font-family: 'Raleway', sans-serif;
+/* Bold (700) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Bold.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Book (400) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Book.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Book.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Light.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Regular (500) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Light.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Light.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Thin.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Thin.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: 700;
     font-style: normal;
 }

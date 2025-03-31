@@ -46,23 +46,50 @@ async def get_yandex_file():
 
 @app.get("/price-content", response_class=HTMLResponse)
 async def price_content(tab: str):
+    """Возвращает HTML с активным табом, сабтабами и данными первого сабтаба"""
     items = price_data["items"].get(tab, [])
-    
+
     if not items:
         return "<p>Данные отсутствуют</p>"
 
-    html_content = "".join(
-        f"""
-        <div class="price__item">
-            <h3 class="price__item-title">{item["title"]}</h3>
-            <p class="price__item-price">{item["price"]} руб.</p>
-            <p class="price__item-subtitle">{item["subtitle"]}</p>
-        </div>
-        """
-        for item in items
+    sub_tabs = [item["title"] for item in items if "title" in item]
+
+    if not sub_tabs:
+        return "<p>Нет сабтабов</p>"
+
+    sub_tabs_html = "".join(
+        f'<li class="sub-tab{" selected" if i == 0 else ""}" data-subtab="{sub_tab}" '
+        f'hx-get="/services?main_tab={tab}&sub_tab={sub_tab}" '
+        f'hx-target=".price__content" hx-swap="innerHTML" '
+        f'hx-trigger="click">{sub_tab}</li>'
+        for i, sub_tab in enumerate(sub_tabs)
     )
 
-    return f"<div class='price__items'>{html_content}</div>"
+    first_sub_tab = sub_tabs[0]
+
+    services = []
+    for category in items:
+        if category.get("title") == first_sub_tab:
+            services = category.get("items", [])
+            break
+
+    services_html = "".join(
+        f"""
+        <li class="price-content__item">
+            <p class="price-content__name">{service.get("service", "")}</p>
+            <p class="price-content__price">{service.get("price", "0")} руб.</p>
+        </li>
+        """
+        for service in services
+    ) if services else "<p>Нет данных</p>"
+
+    return f"""
+    <ul class='sub-tabs'>{sub_tabs_html}</ul>
+    <div class='price__content'>
+        <ul class='price-content__list'>{services_html}</ul>
+    </div>
+    """
+
 
 @app.post("/send", response_class=HTMLResponse)
 async def send(name: str = Form(...), phone: str = Form(...)):

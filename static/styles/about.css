@@ -54,7 +54,7 @@
 .about__subtitle {
     display: block;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.5;
     margin-top: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -81,7 +81,7 @@
 }
 
 /* Адаптация */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .about {
         padding: 0px;
         border-radius: 0 ;
@@ -90,6 +90,11 @@
     .about__banner {
     border-radius: 0px;
     padding: 0;
+    }
+
+    .about__banner-content {
+        padding: 26px;
+        text-align: start;
     }
 
     .about__title {
@@ -128,7 +133,7 @@
 @media screen and (max-width: 768px) {
     .about {
         padding: 0px;
-        border-radius: 0 ;
+        border-radius: 0;
     }
 
     .about__banner {
@@ -159,7 +164,7 @@
 @media screen and (max-width: 576px) {
     .about {
         padding: 0px;
-        border-radius: 0 ;
+        border-radius: 0;
     }
 
     .about__banner {
