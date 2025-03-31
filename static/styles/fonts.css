@@ -78,8 +78,58 @@
     font-display: swap;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+/* Bold (700) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Bold.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Book (400) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Book.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Book.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Light.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Regular (500) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Light.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Light.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Thin.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Thin.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: 700;
     font-style: normal;
 }

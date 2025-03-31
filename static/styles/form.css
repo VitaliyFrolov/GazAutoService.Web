@@ -107,7 +107,7 @@
     transition: color 0.3s;
 }
 
-/* Адаптация для планшетов (1024px) */
+/* Адаптация для ноута (1300px) */
 @media (max-width: 1300px) {
     .form {
         padding: 40px 22px;
@@ -116,6 +116,8 @@
     .form__title {
         font-size: 42px;
         margin-bottom: 60px;
+        overflow-wrap: break-word;
+        margin: 39px;
     }
     
     .form__columns {
@@ -137,6 +139,7 @@
     .form__title {
         font-size: 36px;
         margin-bottom: 30px;
+        margin: 0px;
     }
     
     .form__form {
@@ -163,9 +166,6 @@
         margin-bottom: 20px;
     }
     
-    .form__form {
-        padding: 30px 30px;
-    }
     
     .form__title {
         font-size: 28px;

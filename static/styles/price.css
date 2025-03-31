@@ -54,6 +54,7 @@
     line-height: 400;
     text-transform: uppercase;
     line-height: 130%;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .sub-tab.active {
@@ -76,6 +77,7 @@
     line-height: 130%;
     font-weight: 500;
     color: #000000;
+    font-family: 'Roboto-Regular', sans-serif;
 }
   
 .price-content__name::after {
@@ -93,6 +95,7 @@
     line-height: 130%;
     font-weight: 500;
     color: #000000;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .price-content__list {
