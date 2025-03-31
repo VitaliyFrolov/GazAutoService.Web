@@ -140,13 +140,16 @@
 
 /* Адаптация */
 @media (max-width: 1300px) {
+@media (max-width: 1300px) {
     .contacts {
+        padding: 10px;
         padding: 10px;
         gap: 20px;
     }
     
     .contacts__container {
         flex-direction: column;
+        padding: 10px;
         padding: 10px;
     }
     
@@ -187,6 +190,7 @@
 @media (max-width: 480px) {
     .contacts {
         padding: 15px;
+        padding: 15px;
     }
     
     .contacts__container {
@@ -199,6 +203,7 @@
     
     .contacts__text {
         font-size: 16px;
+        margin-bottom: 33px;
         margin-bottom: 33px;
     }
     
