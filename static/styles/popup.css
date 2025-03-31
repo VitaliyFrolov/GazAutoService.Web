@@ -18,8 +18,8 @@
     position: relative;
     z-index: 1001;
     width: 90%;
-    max-width: 700px; /* Минимальная ширина */
-    padding: 2.5vw; /* Отступы в vw для адаптивности */
+    max-width: 500px; /* Минимальная ширина */
+    /* padding: 2.5vw; Отступы в vw для адаптивности */
     margin: auto;
     box-sizing: border-box;
     transition: all 0.3s ease; /* Плавные изменения */
@@ -94,7 +94,6 @@
 /* Адаптация для маленьких экранов */
 @media (max-width: 480px) {
     .popup {
-        padding: 20px;
         min-width: unset;
     }
     .form__title {

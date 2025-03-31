@@ -16,7 +16,7 @@
 
 .advantages__title {
     color: #F1721B;
-    font-size: 42px;
+    font-size: 64px;
     font-weight: 600;
     line-height: 130%;
     margin-bottom: 20px;
@@ -27,6 +27,7 @@
     font-size: 18px;
     line-height: 1.5;
     font-weight: 500;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .advantages-grid {
@@ -64,7 +65,7 @@
 
 .advantages-card__title {
     color: #000;
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 15px;
@@ -72,9 +73,10 @@
 
 .advantages-card__text {
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 /* Адаптивность */
@@ -98,7 +100,7 @@
     }
     
     .advantages__title {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .advantages-card__row {
@@ -153,11 +155,11 @@
     }
     
     .advantages-card__title {
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 10px;
     }
     
     .advantages-card__text {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
