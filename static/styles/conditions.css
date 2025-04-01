@@ -12,7 +12,7 @@
 
 .conditions__title {
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 130%;
     margin-bottom: 60px;
     text-align: start;
@@ -29,6 +29,7 @@
     text-align: start;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .conditions__list {
@@ -47,9 +48,9 @@
 .conditions__item-title {
     font-size: 30px;
     line-height: 39px;
-    font-weight: 500;
+    font-weight: 700;
     color: #F1721B;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .conditions__item-content {
@@ -57,6 +58,7 @@
     line-height: 20.8px;
     font-weight: 400;
     color: #000000;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .conditions__item-img {
@@ -73,7 +75,7 @@
     }
     
     .conditions__container {
-        padding: 10px 30px;
+        padding: 10px 10px;
     }
 
     .conditions__title {
@@ -87,7 +89,7 @@
         font-size: 16px;
         line-height: 20.8px;
         margin-bottom: 60px;
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .conditions__list {
@@ -95,8 +97,8 @@
     }
 
     .conditions__item {
-        min-height: 300px;
-        padding: 30px;
+        min-height: 200px;
+        padding: 40px 26px;
     }
 
     .conditions__item:nth-child(2) {
@@ -124,7 +126,7 @@
     }
 
     .conditions__title {
-        font-size: 28px;
+        font-size: 40px;
         line-height: 36.4px;
         text-align: left;
         margin-bottom: 30px;
@@ -133,7 +135,7 @@
     }
 
     .conditions__subtitle {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18.2px;
         text-align: left;
         padding: 0 20px;
