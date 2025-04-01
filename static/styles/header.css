@@ -44,6 +44,12 @@
 .header__social-item-location-icon {
     width: 24px;
     height: 24px;
+    display: none;
+}
+.header__social-item-location-icon-tablet {
+    display: flex;
+    width: 24px;
+    height: 24px;
 }
 
 .header__social-item_location-text {
@@ -171,7 +177,7 @@
 /* tablet */
 @media screen and (max-width: 1879px) {
     .header {
-        padding: 5px 10px;
+        padding: 5px 65px;
     }
 
     .header__logo {
@@ -194,9 +200,10 @@
     }
 
     .header__social-item-location-icon-tablet {
-        width: 9px;
-        height: 11px;
-        display: none;
+        width: 15px;
+        height: 16px;
+        display: flex;
+        margin-right: 10px;
     }
 
     .header__social-item_location-text-tablet {
@@ -296,6 +303,11 @@
         font-size: 20px;
         line-height: 23.48px;
         font-weight: 500;
+    }
+}
+@media screen and (max-width: 1879px) {
+    .header {
+        padding: 5px 0px;
     }
 }
 
