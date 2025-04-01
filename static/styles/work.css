@@ -1,5 +1,5 @@
 .work {
-    padding: 0 70px;
+    padding: 40px 70px;
     line-height: 130%;
 }
 
@@ -7,7 +7,7 @@
     margin-bottom: 40px;
     padding: 0;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 130%;
     text-align: start;
 }
@@ -36,7 +36,7 @@
 /* Tablet version */
 @media screen and (max-width: 1280px) {
     .work {
-        padding: 30px 22px;
+        padding: 40px 22px;
     }
 
     .work__title {

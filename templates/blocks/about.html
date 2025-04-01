@@ -1,13 +1,168 @@
 <section class="about" id="about-block">
     <div class="about__banner">
-        <div class="about__banner-content">
+        <div class="about__slider">
+            <div class="about__slides">
+                <!-- Слайд 1 -->
+                <div class="about__slide">
+                    <img src="static/images/about-banner1.png" alt="about_banner" class="about__slide-img">
+                    <div class="about__banner-content">
+                        <h1 class="about__title">
+                            Мы знаем, что поломки — это потерянные возможности для бизнеса.
+                            <span class="about__subtitle">Наш автосервис «ГазАвтоСервис» предлагает ремонт и обслуживание коммерческого</br> транспорта, которые минимизируют простои и потерю денег.</span>
+                        </h1>
+                        <button class="button about__button open-popup">
+                            Получить консультацию
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Слайд 2 -->
+                <div class="about__slide">
+                    <img src="static/images/about-banner2.png" alt="about_banner" class="about__slide-img">
+                    <div class="about__banner-content">
+                        <div class="about__info">
+                            <div class="about__info-item">
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Современное, технологичное оборудование
+                                </p>
+                            </div>
+                            <div class="about__info-item">
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Мастера высокой квалификации
+                                </p>
+                            </div>
+                            <div class="about__info-item">
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Кратчайшие сроки по&nbsp;выявлению и&nbsp;исправлению дефектов
+                                </p>
+                            </div>
+                            <div class="about__info-item">                            
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Удобное транспортное расположение. Закрытая территория, своя стоянка для&nbsp;авто, высота ворот 4,5&nbsp;метра
+                                </p>
+                            </div>
+                            <div class="about__info-item">
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Наличный и&nbsp;безналичный расчёт, работаем с&nbsp;НДС
+                                </p>
+                            </div>
+                            <div class="about__info-item">
+                                <img src="static/images/about-icon.png" alt="about_icon" class="about__info-icon" width="48px" height="48px">
+                                <p class="about__info-text">
+                                    Работаем ежедневно
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about__pagination"></div>
+        </div>
+        <!-- <div class="about__banner-content">
             <h1 class="about__title">
                 Мы знаем, что поломки — это потерянные возможности для бизнеса.
-                <span class="about__subtitle">Наш автосервис «ГАЗ Сервис» предлагает ремонт и обслуживание коммерческого транспорта, которые минимизируют простои и потерю денег.</span>
+                <span class="about__subtitle">Наш автосервис «ГазАвтоСервис» предлагает ремонт и обслуживание коммерческого</br> транспорта, которые минимизируют простои и потерю денег.</span>
             </h1>
             <button class="button about__button open-popup">
                 Получить консультацию
             </button>
-        </div>
+        </div> -->
     </div>
 </section>
+
+<script>// static/js/slider.js
+document.addEventListener('DOMContentLoaded', function() {
+    const slidesWrapper = document.querySelector('.about__banner');
+    const slidesContainer = document.querySelector('.about__slides');
+    const slides = document.querySelectorAll('.about__slide'); // Нужно добавить обертку для каждого слайда
+    const pagination = document.querySelector('.about__pagination');
+    
+    let currentIndex = 0;
+    const slideCount = slides.length;
+
+    // Создаем пагинацию
+    for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'photos__pagination-line';
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        pagination.appendChild(dot);
+    }
+
+    // Функция переключения слайдов
+    function goToSlide(index) {
+        currentIndex = index;
+        const offset = -currentIndex * 100;
+        
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+        
+        // Обновляем активную точку
+        document.querySelectorAll('.photos__pagination-line').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    // Автопереключение каждые 5 секунд
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        goToSlide(currentIndex);
+    }, 10000);
+});        const slidesWrapper = document.querySelector('.about__banner');
+        const slides = document.querySelector('.about__slides');
+        const slideItems = document.querySelectorAll('.about__slide-img');
+        const pagination = document.querySelector('.about__pagination');
+        const prevBtn = document.querySelector('.photos__arrow--prev');
+        const nextBtn = document.querySelector('.photos__arrow--next');
+        const content = document.querySelectorAll('.about__banner-content')
+        
+        let currentIndex = 0;
+        let slideWidth = slideItems[0].offsetWidth  // Ширина слайда + gap
+        let wrapperWidth = slidesWrapper.offsetWidth;
+        let totalSlidesWidth = slideItems.length * slideWidth;
+
+        // Рассчитываем максимально возможное смещение
+        let maxOffset = Math.max(0, totalSlidesWidth - wrapperWidth); 
+
+        window.addEventListener("resize", () => {
+            slideWidth = slideItems[0].offsetWidth  // Ширина слайда + gap
+            wrapperWidth = slidesWrapper.offsetWidth;
+            totalSlidesWidth = slideItems.length * slideWidth;
+
+        // Рассчитываем максимально возможное смещение
+            maxOffset = Math.max(0, totalSlidesWidth - wrapperWidth); 
+        })
+
+        content.forEach((el, index) => {            
+            currentIndex = index;
+            let offset = currentIndex * slideWidth;
+            
+            // Ограничиваем смещение, чтобы не уходить в белое пространство
+            offset = Math.min(offset, maxOffset);
+            content[index].style.left = offset;
+        })
+        
+        // Функция переключения слайдов
+        function goToSlide(index) {
+            currentIndex = index;
+            let offset = currentIndex * slideWidth;
+            
+            // Ограничиваем смещение, чтобы не уходить в белое пространство
+            offset = Math.min(offset, maxOffset);
+            
+            
+            slides.style.transform = `translateX(-${offset}px)`;
+            
+            // Блокируем кнопки при достижении границ
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = offset >= maxOffset;
+        }
+        
+        // Остальной код (кнопки, автопрокрутка) без изменений
+        // ...
+</script>
