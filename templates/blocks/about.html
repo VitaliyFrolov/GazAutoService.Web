@@ -1,6 +1,8 @@
 <section class="about" id="about-block">
     <div class="about__banner">
         <div class="about__slider">
+            <button class="about__nav-button about__nav-button--prev" aria-label="Предыдущий слайд"></button>
+            <button class="about__nav-button about__nav-button--next" aria-label="Следующий слайд"></button>
             <div class="about__slides">
                 <!-- Слайд 1 -->
                 <div class="about__slide">
@@ -82,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const slidesContainer = document.querySelector('.about__slides');
     const slides = document.querySelectorAll('.about__slide'); // Нужно добавить обертку для каждого слайда
     const pagination = document.querySelector('.about__pagination');
+    const prevBtn = document.querySelector('.about__nav-button--prev');
+    const nextBtn = document.querySelector('.about__nav-button--next');
     
     let currentIndex = 0;
     const slideCount = slides.length;
@@ -108,11 +112,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Автопереключение каждые 5 секунд
-    setInterval(() => {
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        goToSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % slideCount;
         goToSlide(currentIndex);
-    }, 10000);
+    });
+
+    // Автопереключение каждые 5 секунд
+    // setInterval(() => {
+    //     currentIndex = (currentIndex + 1) % slideCount;
+    //     goToSlide(currentIndex);
+    // }, 10000);
 });        const slidesWrapper = document.querySelector('.about__banner');
         const slides = document.querySelector('.about__slides');
         const slideItems = document.querySelectorAll('.about__slide-img');
