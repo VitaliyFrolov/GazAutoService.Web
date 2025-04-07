@@ -33,6 +33,7 @@
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+    margin-right: 20px;
 }
 
 .header__social-item_location {
@@ -75,7 +76,10 @@
     font-size: 24px;
     line-height: 130%;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
     color: #000000;
+    
 }
 
 .header__mail {
@@ -181,12 +185,13 @@
     }
 
     .header__logo {
-        width: 84px;
-        height: 45px;
+        width: 124px;
+        height: 65px;
+        margin-left: 20px;
     }    
 
     .header__title {
-        font-size: 28px;
+        font-size: 36px;
         line-height: 100%;
     }
 
@@ -208,8 +213,9 @@
 
     .header__social-item_location-text-tablet {
         display: flex;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 22px;
+        font-weight: 600;
+        margin-right: 20px;
     }
 
     .header__social-item_location-text {
@@ -219,14 +225,15 @@
 
     
     .header__phone {
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 700;
         line-height: 100%;
         white-space: nowrap;
     }
 
     .header__mail {
-        font-size: 10px;
+        /* font-size: 10px; */
+        font-size: 22px;
     }
 
     .header__nav-wrapper {
@@ -256,7 +263,7 @@
     }
 
     .header__button {
-        font-size: 10px;
+        font-size: 14px;
         padding: 12px 47px;
     }
 
@@ -362,6 +369,9 @@
 
     .header__logo {
         margin-left: 10px;
+        width: 84px;
+        height: 45px;
+        margin-left: 0px;
     }    
 
 
@@ -370,6 +380,7 @@
     }
     .header__social-list {
         padding: 0 5px;
+        margin-right: 0px;
     }
 
     .header__social-item_whatsapp {
@@ -420,10 +431,17 @@
 
     .header__phone {
         margin-bottom: 2px;
+        font-size: 16px;
         white-space: nowrap;
+        justify-content: start;
+    }
+
+    .header__mail {
+        font-size: 16px;
     }
 
     .header__social-list {
         gap: 0;
+        margin-right: 0px;
     }
 }
