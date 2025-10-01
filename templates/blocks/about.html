@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentIndex = 0;
     const slideCount = slides.length;
+    let autoSlideInterval;
 
     // Создаем пагинацию
     for (let i = 0; i < slideCount; i++) {
@@ -186,6 +187,18 @@ document.addEventListener('DOMContentLoaded', function() {
         pagination.appendChild(dot);
     }
 
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            goToSlide(currentIndex);
+        }, 7000); // 7 секунд
+    }
+    function restartAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+        startAutoSlide();
+    }
     // Функция переключения слайдов
     function goToSlide(index) {
         currentIndex = index;
@@ -210,30 +223,10 @@ document.addEventListener('DOMContentLoaded', function() {
         goToSlide(currentIndex);
         restartAutoSlide();
     });
-
     startAutoSlide();
-    slidesWrapper.addEventListener('mouseenter', stopAutoSlide);
-    slidesWrapper.addEventListener('mouseleave', startAutoSlide);
-    slidesWrapper.addEventListener('touchstart', stopAutoSlide);
 
 
-     setInterval(() => {
-         currentIndex = (currentIndex + 1) % slideCount;
-        goToSlide(currentIndex);
-     }, 7000);
-      // Функция остановки автопрокрутки
-    function stopAutoSlide() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = null;
-        }
-    }
 
-    // Функция перезапуска автопрокрутки
-    function restartAutoSlide() {
-        stopAutoSlide();
-        startAutoSlide();
-    }
 });        const slidesWrapper = document.querySelector('.about__banner,');
         const slides = document.querySelector('.about__slides');
         const slideItems = document.querySelectorAll('.about__slide-img');
