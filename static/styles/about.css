@@ -57,11 +57,25 @@
 .about__slide-content {
     position: absolute;
 }
-
-.about__info{
+.about__1th_slide {
+    padding: 86px;
+    max-width: 1200px;
+}
+.about__2th_slide {
+    display: flex;
+    padding: 45px;
+}
+.about__3th_slide {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__4th_slide{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    padding: 86px;
+    max-width: 1200px;
 }
 
 .about__info-item {
@@ -86,7 +100,28 @@
     flex-shrink: 0;
 }
 
+.about__button-2th_slide {
+    padding: 30px 50px;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 10;
+    background-color: #F1721B;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
 .about__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about__slide-img-desktop {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -165,11 +200,179 @@
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 1200px;
     width: 100%;
-    padding: 86px;
     color: #fff;
     box-sizing: border-box;
+}
+.about__title__slide2 {
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.about__title__slide3 {
+    font-size: 84px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about__slide_2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-evenly;
+
+}
+
+.about__slide-img-mobile {
+    display: none;
+}
+.about__slide-img-tablet {
+    display: none;
+}
+
+.about__slide_2-mobile {
+    display: none;
+}
+
+.about__banner-content__side1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.about__banner-content__side1 .about__button {
+    flex-shrink: 0;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.about__prices {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 40px;
+    gap: 15px;
+}
+
+.about__price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.about__vehicle {
+    font-size: 36px;
+    color: white;
+    flex: 1;
+    font-weight: 600;
+}
+
+.about__price-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.about__dash {
+    font-size: 40px;
+    color: white;
+}
+
+
+.about__prices-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.custom-font {
+    font-family: "Tahoma";
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 67px;
+}
+.about__price {
+    font-size: 38px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+
+.about__included {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    width: 100%;
+}
+
+/* Стили для слайда с развалом-схождением */
+.about__alignment-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about__alignment-info-text {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about__alignment-price {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.about__alignment-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about__button-2slide {
+    padding: 35px 57px;
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 10;
+    background-color: #F1721B;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.about__button--secondary {
+    background-color: transparent;
+    border: 2px solid #F1721B;
+    background-color: #F1721B;
+}
+
+.about__button--secondary:hover {
+    background-color: rgba(241, 114, 27, 0.1);
+}
+
+.second-line {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.about__alignment-phone {
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
 }
 
 .about__title {
@@ -185,6 +388,14 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 1.5;
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about__subtitle__slide2 {
+    display: block;
+    font-size: 36px;
+    font-weight: 600;
     margin-top: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -220,10 +431,26 @@
         border-radius: 0px;
         padding: 0;
         }
+    
+    .about__title__slide2 {
+        font-size: 64px ;
+    }
+
+    .custom-font {
+        font-size:54px;
+    }
+
+    .about__vehicle {
+        font-size: 30px;
+    }
 
     .about__banner-content {
-        padding: 86px;
         text-align: start;
+    }
+
+    .about__banner-content__complex-side {
+        display: flex;
+        padding: 5px;
     }
     
     .about__button {
@@ -241,7 +468,58 @@
     .about__banner {
         min-height: 500px;
     }
-    
+
+    .about__vehicle {
+        font-size: 20px;
+    }
+
+    .about__prices {
+        gap: 8px;
+    }
+
+    .about__price {
+        font-size: 26px;
+    }
+
+    .about__dash {
+        font-size: 25px;
+    }
+
+    .about__button-2th_slide {
+        padding: 25px 30px;
+    }
+
+    .about__slide_2 {
+        padding: 50px;
+    }
+
+    .about__title__slide3 {
+        font-size: 74px;
+    }
+
+    .about__subtitle__slide2 {
+        margin-top: 10px;
+    }
+
+    .about__alignment-info {
+    margin-top: 20px;
+    text-align: center;
+    }
+
+    .about__alignment-info-text {
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    .about__alignment-phone {
+        margin-top: 15px;
+        font-size: 22px;
+    }
+
+    .about__button-2slide {
+        padding: 25px 37px;
+    }
+
     .about__title {
         font-size: 36px;
     }
@@ -270,6 +548,29 @@
         border-radius: 0;
     }
 
+    .about__slide-img-desktop {
+        display: none;
+    }
+    .about__slide-img-tablet {
+        display: block;
+        max-width:800 ;
+    }
+    .about__slide-img-mobile {
+        display: none;
+    }
+
+
+    .about__slide_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about__prices {
+        padding-left: 0;
+        line-height: 0.9;
+    }
+
     .about__nav-button {
         width: 5%;
     }
@@ -291,10 +592,26 @@
         padding: 30px;
     }
     
+    .about__title__slide2 {
+        font-size: 46px;
+        margin-bottom: 20px;
+        padding: 0;
+        line-height: 0.9;
+    }
+
+    .custom-font {
+        font-size: 36px;
+    }
+
+    .about__button-2th_slide {
+        display: none;
+    }
+
     .about__title {
         font-size: 30px;
         margin-bottom: 20px;
     }
+
     
     .about__subtitle {
         font-size: 16px;
@@ -327,9 +644,104 @@
         border-radius: 0;
     }
 
+    .about__slide-img-desktop {
+        display: none;
+    }
+    .about__slide-img-tablet {
+        display: none;
+    }
+    .about__slide-img-mobile {
+        display: block;
+    }
+
     .about__nav-button {
         width: 16%;
     }
+
+    .about__slide_2 {
+        padding: 0px;
+    }
+
+    .about__title__slide3 {
+        font-size: 42px;
+    }
+
+    .about__subtitle__slide2 {
+        margin-top: 5px;
+        font-size: 22px;
+        object-fit: cover;
+    }
+
+    .about__alignment-price {
+        font-size: 32px;
+        font-weight: 600;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .about__alignment-info {
+        margin-top: 0px;
+
+    }
+
+    .about__alignment-info-text {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .about__button-2slide {
+        padding: 25px 67px;
+        font-size: 20px;
+    }
+
+    .about__alignment-phone {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+
+    .about__title__slide2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .custom-font {
+        font-size: 29px;
+    }
+
+    .about__included {
+        font-size: 11px;
+        margin-top: 17px;
+    }
+
+    .about__vehicle {
+        font-size: 18px;
+    }
+
+    .about__dash {
+        font-size: 17px;
+        margin-left: 17px;
+    }
+
+    .about__price {
+        font-size: 16px;
+        padding-left: 0px;
+    }
+
+    .about__1th_slide {
+        padding: 0;
+
+    }
+    .about__2th_slide {
+        padding: 0px;
+
+    }
+
+    .about__4th_slide {
+        padding: 0;
+
+    }
+
 
     .about__banner {
         min-height: 350px;
@@ -351,7 +763,7 @@
         padding: 12px 30px;
         font-size: 15px;
     }
-    .about__info {
+    .about__4th_slide {
         gap: 10px;
     }
     .about__info-item {
