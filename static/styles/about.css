@@ -691,7 +691,7 @@
     }
 
     .about__button-2slide {
-        padding: 25px 67px;
+        padding: 18px 29px;
         font-size: 20px;
     }
 
@@ -707,6 +707,7 @@
 
     .custom-font {
         font-size: 29px;
+        margin-left: 9px;
     }
 
     .about__included {
